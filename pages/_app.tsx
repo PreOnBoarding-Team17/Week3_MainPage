@@ -1,6 +1,8 @@
 import GlobalStyles from "styles/GlobalStyles";
 import Head from "next/head";
 import type { AppProps } from "next/app";
+import { ThemeProvider } from "styled-components";
+import { device } from "styles/Mixin";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -30,7 +32,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
       </Head>
       <GlobalStyles />
-      <Component {...pageProps} />
+      <ThemeProvider theme={{ device }}>
+        <Component {...pageProps} />
+      </ThemeProvider>
     </>
   );
 }
