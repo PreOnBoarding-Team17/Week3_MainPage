@@ -4,11 +4,7 @@ import styled from "styled-components";
 const DownloadButton: React.FC = () => {
   return (
     <ButtonWrap>
-      <Image
-        src="assets/mini-logo-white.png"
-        alt="download"
-        className="mini-logo"
-      />
+      <Image src="assets/mini-logo-white.png" alt="download" />
       <div>
         <span>다운로드</span>
       </div>
