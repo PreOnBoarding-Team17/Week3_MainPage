@@ -15,7 +15,6 @@ const Home: NextPage = () => {
       <Main />
       <About />
       <DownloadButton />
-      <Main />
       <LiveVideo />
     </div>
   );
