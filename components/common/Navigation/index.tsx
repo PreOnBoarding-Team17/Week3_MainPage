@@ -1,9 +1,9 @@
-import React from 'react'
-import styled from 'styled-components'
-import Image from 'next/image'
-import LogoWhite from 'public/assets/logo-white.png'
-import Cart from 'public/assets/cart.png'
-import Hamburger from 'public/assets/hamburger.png'
+import React from 'react';
+import styled from 'styled-components';
+import Image from 'next/image';
+import LogoWhite from 'public/assets/logo-white.png';
+import Cart from 'public/assets/cart.png';
+import Hamburger from 'public/assets/hamburger.png';
 
 const Navigation: React.FC = () => {
   return (
@@ -33,8 +33,8 @@ const Navigation: React.FC = () => {
         </SmallMenu>
       </NavWrap>
     </Nav>
-  )
-}
+  );
+};
 
 const Nav = styled('nav')`
   position: fixed;
@@ -50,7 +50,7 @@ const Nav = styled('nav')`
   @media ${({ theme }) => theme.device.pc} {
     height: 90px;
   }
-`
+`;
 
 const NavWrap = styled('div')`
   display: flex;
@@ -65,7 +65,7 @@ const NavWrap = styled('div')`
   @media ${({ theme }) => theme.device.pc} {
     margin: 20px auto;
   }
-`
+`;
 
 const Logo = styled('div')`
   width: 112.2px;
@@ -78,7 +78,7 @@ const Logo = styled('div')`
     width: 154.5px;
     height: 50px;
   }
-`
+`;
 
 const FullMenu = styled('div')`
   display: none;
@@ -108,7 +108,7 @@ const FullMenu = styled('div')`
   @media ${({ theme }) => theme.device.pc} {
     display: flex;
   }
-`
+`;
 
 const SmallMenu = styled('div')`
   display: flex;
@@ -133,6 +133,6 @@ const SmallMenu = styled('div')`
   @media ${({ theme }) => theme.device.pc} {
     display: none;
   }
-`
+`;
 
-export default Navigation
+export default Navigation;
