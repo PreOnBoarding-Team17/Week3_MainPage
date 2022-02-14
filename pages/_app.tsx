@@ -1,4 +1,4 @@
-import GlobalStyles from "../styles/GlobalStyles";
+import GlobalStyles from "styles/GlobalStyles";
 import Head from "next/head";
 import type { AppProps } from "next/app";
 
@@ -24,10 +24,13 @@ function MyApp({ Component, pageProps }: AppProps) {
           property="og:description"
           content="캐릭터 선생님과 함께 실시간으로 즐기는 독서클래스"
         />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/earlyaccess/notosanskr.css"
+        />
       </Head>
       <GlobalStyles />
       <Component {...pageProps} />
-      {/* </GlobalStyles> */}
     </>
   );
 }
