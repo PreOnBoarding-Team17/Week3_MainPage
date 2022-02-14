@@ -24,7 +24,7 @@ const LiveVideo = ({ isPc }: LiveVideoProps) => {
             </TextWrapper>
           </TextContainer>
           <VideoContainer>
-            <Image src="assets/monitor.png" alt="모니터 이미지" />
+            <Image src="assets/LiveVideo/monitor.png" alt="모니터 이미지" />
             <VideoWrapper>
               <Video autoPlay muted loop playsInline>
                 <source src="assets/CheckedBooks/Video.mp4" type="video/mp4" />
@@ -50,7 +50,7 @@ const Wrapper = styled.div`
   height: 628px;
   width: 100%;
   overflow-x: hidden;
-  background-image: url('/assets/CheckedBooks/Background.png');
+  background-image: url('/assets/LiveVideo/Background.png');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
