@@ -1,7 +1,7 @@
-import type { NextPage } from "next";
-import Navigation from "components/common/Navigation";
-import Main from "components/Main";
-import DownloadButton from "components/common/DownloadButton";
+import type { NextPage } from 'next'
+import Navigation from 'components/common/Navigation'
+import Main from 'components/Main'
+import DownloadButton from 'components/common/DownloadButton'
 
 const Home: NextPage = () => {
   return (
@@ -10,7 +10,7 @@ const Home: NextPage = () => {
       <DownloadButton />
       <Main />
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

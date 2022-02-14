@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
-import Image from "next/image";
-import LogoWhite from "public/assets/logo-white.png";
-import Cart from "public/assets/cart.png";
-import Hamburger from "public/assets/hamburger.png";
+import React from 'react'
+import styled from 'styled-components'
+import Image from 'next/image'
+import LogoWhite from 'public/assets/logo-white.png'
+import Cart from 'public/assets/cart.png'
+import Hamburger from 'public/assets/hamburger.png'
 
 const Navigation: React.FC = () => {
   return (
@@ -33,10 +33,10 @@ const Navigation: React.FC = () => {
         </SmallMenu>
       </NavWrap>
     </Nav>
-  );
-};
+  )
+}
 
-const Nav = styled("nav")`
+const Nav = styled('nav')`
   position: fixed;
   top: 0;
   left: 0;
@@ -50,9 +50,9 @@ const Nav = styled("nav")`
   @media ${({ theme }) => theme.device.pc} {
     height: 90px;
   }
-`;
+`
 
-const NavWrap = styled("div")`
+const NavWrap = styled('div')`
   display: flex;
   max-width: 1140px;
   justify-content: space-between;
@@ -65,9 +65,9 @@ const NavWrap = styled("div")`
   @media ${({ theme }) => theme.device.pc} {
     margin: 20px auto;
   }
-`;
+`
 
-const Logo = styled("div")`
+const Logo = styled('div')`
   width: 112.2px;
   height: 36px;
   @media ${({ theme }) => theme.device.tablet} {
@@ -78,9 +78,9 @@ const Logo = styled("div")`
     width: 154.5px;
     height: 50px;
   }
-`;
+`
 
-const FullMenu = styled("div")`
+const FullMenu = styled('div')`
   display: none;
   align-items: center;
 
@@ -108,9 +108,9 @@ const FullMenu = styled("div")`
   @media ${({ theme }) => theme.device.pc} {
     display: flex;
   }
-`;
+`
 
-const SmallMenu = styled("div")`
+const SmallMenu = styled('div')`
   display: flex;
 
   align-items: center;
@@ -133,6 +133,6 @@ const SmallMenu = styled("div")`
   @media ${({ theme }) => theme.device.pc} {
     display: none;
   }
-`;
+`
 
-export default Navigation;
+export default Navigation

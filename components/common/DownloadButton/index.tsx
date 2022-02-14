@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react'
+import styled from 'styled-components'
 
 const DownloadButton: React.FC = () => {
   return (
@@ -9,10 +9,10 @@ const DownloadButton: React.FC = () => {
         <span>다운로드</span>
       </div>
     </ButtonWrap>
-  );
-};
+  )
+}
 
-const ButtonWrap = styled("div")`
+const ButtonWrap = styled('div')`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -54,7 +54,7 @@ const ButtonWrap = styled("div")`
     bottom: 30px;
     right: 30px;
   }
-`;
+`
 
 const Image = styled.img`
 	width: 26.8px;
@@ -64,6 +64,6 @@ const Image = styled.img`
 		height: 30px;
 	}
 }
-`;
+`
 
-export default DownloadButton;
+export default DownloadButton
