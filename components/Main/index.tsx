@@ -6,7 +6,7 @@ const MainContainer = styled.div`
   height: 100vh;
 
   border: 0.1px solid #fff;
-  background-image: url('assets/main-tablet-bg.jpg');
+  background-image: url('assets/main/main-tablet-bg.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -19,7 +19,7 @@ const MainContainer = styled.div`
 
   @media ${({ theme }) => theme.device.tablet} {
     background-position: 75% center;
-    background-image: url('assets/main-bg.jpg');
+    background-image: url('assets/main/main-bg.jpg');
 
 `
 const MainContent = styled.div`

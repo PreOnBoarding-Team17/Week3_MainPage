@@ -1,5 +1,6 @@
 import React from 'react'
 import { useMediaQuery } from 'react-responsive'
+import Image from 'next/image'
 import styled from 'styled-components'
 
 const AboutContainer = styled.div`
@@ -19,15 +20,17 @@ const AboutContainer = styled.div`
 `
 
 const AboutImage = styled.div`
-  background-image: url('/assets/white-logo.png');
-  background-size: cover;
-  background-repeat: no-repeat;
+  // background-image: url('/assets/second-logo');
+  // background-size: cover;
+  // background-repeat: no-repeat;
   width: 67px;
   height: 50px;
 
   @media ${({ theme }) => theme.device.tablet} {
-    width: 134px;
-    height: 100px;
+    img {
+      width: 134px;
+      height: 100px;
+    }
   }
 `
 
@@ -61,7 +64,14 @@ const About: React.FC = () => {
   const isPC = useMediaQuery({ query: '(min-width: 1200px)' })
   return (
     <AboutContainer>
-      <AboutImage></AboutImage>
+      <AboutImage>
+        <Image
+          src="/assets/second-logo.gif"
+          alt="logo"
+          width="67px"
+          height="50px"
+        />
+      </AboutImage>
 
       <AboutTitle>땅콩스쿨이란?</AboutTitle>
 
