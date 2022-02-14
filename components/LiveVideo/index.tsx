@@ -27,7 +27,7 @@ const LiveVideo = ({ isPc }: LiveVideoProps) => {
             <Image src="assets/LiveVideo/monitor.png" alt="모니터 이미지" />
             <VideoWrapper>
               <Video autoPlay muted loop playsInline>
-                <source src="assets/CheckedBooks/Video.mp4" type="video/mp4" />
+                <source src="assets/LiveVideo/Video.mp4" type="video/mp4" />
               </Video>
             </VideoWrapper>
           </VideoContainer>
