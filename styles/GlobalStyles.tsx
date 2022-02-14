@@ -1,11 +1,11 @@
-import reset from 'styled-reset'
-import { createGlobalStyle } from 'styled-components'
+import reset from 'styled-reset';
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
 	${reset};
 	html {
 		font-family: 'Noto Sans KR', sans-serif;
 	}
-	`
+	`;
 
-export default GlobalStyles
+export default GlobalStyles;
