@@ -4,6 +4,7 @@ import Main from 'components/Main';
 import About from 'components/About';
 import DownloadButton from 'components/common/DownloadButton';
 import LiveVideo from 'components/LiveVideo';
+import ReadingBooks from 'components/ReadingBooks';
 import useMedia from 'utils/hooks/useMedia';
 
 const Home: NextPage = () => {
@@ -15,7 +16,8 @@ const Home: NextPage = () => {
       <Main />
       <About />
       <DownloadButton />
-      <LiveVideo />
+      <LiveVideo isPc={isPc} />
+      <ReadingBooks isTablet={isTablet} />
     </div>
   );
 };
