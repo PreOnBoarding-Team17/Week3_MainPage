@@ -1,14 +1,14 @@
 import type { NextPage } from "next";
 import Navigation from "components/common/Navigation";
 import Main from "components/Main";
-import CheckedBooks from "components/CheckedBooks";
+import LiveVideo from "components/LiveVideo";
 
 const Home: NextPage = () => {
   return (
     <div>
       <Navigation />
       <Main />
-      <CheckedBooks />
+      <LiveVideo />
     </div>
   );
 };
