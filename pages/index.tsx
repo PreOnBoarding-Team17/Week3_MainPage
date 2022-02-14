@@ -11,9 +11,8 @@ const Home: NextPage = () => {
       <Navigation />
       <Main />
       <About />
-      <DownloadButton />
-      <Main />
       <LiveVideo />
+      <DownloadButton />
     </div>
   )
 }
