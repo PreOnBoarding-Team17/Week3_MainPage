@@ -1,9 +1,10 @@
 import type { NextPage } from "next";
+import CheckedBooks from "components/CheckedBooks";
 
 const Home: NextPage = () => {
   return (
     <div>
-      <h1>hello</h1>
+      <CheckedBooks />
     </div>
   );
 };
