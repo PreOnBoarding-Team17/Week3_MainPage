@@ -4,12 +4,14 @@ import styled, { keyframes } from 'styled-components'
 const MainContainer = styled.div`
   width: 100%;
   height: 100vh;
+
   border: 0.1px solid #fff;
   background-image: url('assets/main-tablet-bg.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   margin: 0 auto;
+
 
   @media ${({ theme }) => theme.device.pc} {
     background-position: center center;
@@ -18,7 +20,7 @@ const MainContainer = styled.div`
   @media ${({ theme }) => theme.device.tablet} {
     background-position: 75% center;
     background-image: url('assets/main-bg.jpg');
-  }
+
 `
 const MainContent = styled.div`
   display: flex;
