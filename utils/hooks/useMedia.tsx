@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
+import { UseMediaInterface } from 'utils/interfaces';
 
-const useMedia = () => {
+const useMedia = (): UseMediaInterface => {
   const [isTablet, setIsTablet] = useState(false);
   const [isPc, setIsPc] = useState(false);
 
