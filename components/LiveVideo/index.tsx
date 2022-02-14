@@ -1,9 +1,15 @@
 import styled from 'styled-components';
 
-const LiveVideo = () => {
-  const text = `친구들과 함께
-그림 그리기, 퀴즈 풀기,
-선생님과 대화하며 경험해요!`;
+interface LiveVideoProps {
+  isPc: boolean;
+}
+
+const LiveVideo = ({ isPc }: LiveVideoProps) => {
+  const title = isPc ? `랜선 라이브\n북클래스` : `랜선 라이브 북클래스`;
+
+  const text = isPc
+    ? `친구들과 함께\n그림 그리기, 퀴즈 풀기,\n선생님과 대화하며 경험해요!`
+    : `친구들과 함께 그림 그리기, 퀴즈 풀기,\n선생님과 대화하며 경험해요!`;
 
   return (
     <Container>
@@ -12,7 +18,7 @@ const LiveVideo = () => {
           <TextContainer>
             <TextWrapper>
               <TextBox>
-                <Title>랜선 라이브 북클래스</Title>
+                <Title>{title}</Title>
                 <Text>{text}</Text>
               </TextBox>
             </TextWrapper>
@@ -100,7 +106,7 @@ const TextWrapper = styled.div`
 
 const TextBox = styled.div`
   display: flex;
-  width: 265.2px;
+  white-space: pre-wrap;
   flex-direction: column;
   color: rgb(51, 51, 51);
   letter-spacing: normal;
@@ -130,7 +136,6 @@ const Title = styled.div`
 
 const Text = styled.div`
   margin-top: 30px;
-  word-break: keep-all;
   font-size: 16px;
   font-weight: normal;
   line-height: 1.75;
@@ -138,13 +143,11 @@ const Text = styled.div`
   text-align: center;
   color: rgb(51, 51, 51);
   @media ${({ theme }) => theme.device.tablet} {
-    white-space: normal;
     margin-top: 50px;
     font-size: 24px;
     line-height: 1.67;
   }
   @media ${({ theme }) => theme.device.pc} {
-    white-space: pre-wrap;
     text-align: left;
   }
 `;
