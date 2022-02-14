@@ -1,5 +1,5 @@
-import type { NextPage } from "next";
-import Navigation from "components/common/Navigation";
+import type { NextPage } from 'next'
+import Navigation from 'components/common/Navigation'
 import Main from 'components/Main'
 import About from 'components/About'
 
