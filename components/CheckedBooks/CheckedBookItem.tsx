@@ -42,9 +42,6 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   @media ${({ theme }) => theme.device.tablet} {
-    margin-right: 30px;
-  }
-  @media ${({ theme }) => theme.device.pc} {
     margin-right: 80px;
   }
   &:last-child {
