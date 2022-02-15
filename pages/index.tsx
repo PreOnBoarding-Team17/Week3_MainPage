@@ -7,8 +7,8 @@ import LiveVideo from 'components/LiveVideo';
 import CheckedBooks from 'components/CheckedBooks';
 import ReadingBooks from 'components/ReadingBooks';
 import ReadingDiary from 'components/ReadingDiary';
+import BestSeller from 'components/BestSeller';
 import Footer from 'components/common/Footer';
-
 import useMedia from 'utils/hooks/useMedia';
 
 const Home: NextPage = () => {
@@ -24,6 +24,7 @@ const Home: NextPage = () => {
       <CheckedBooks isTablet={isTablet} isPc={isPc} />
       <ReadingBooks isTablet={isTablet} />
       <ReadingDiary isPc={isPc} isTablet={isTablet} />
+      <BestSeller isTablet={isTablet} />
       <Footer />
       <DownloadButton />
     </div>
