@@ -6,7 +6,7 @@ import CheckedBookImage from './CheckedBookImage';
 const CheckedBooks = ({ isTablet, isPc }: UseMediaInterface) => {
   const title = isTablet
     ? `교육 전문가들이 선정한 도서`
-    : `교육 전문가들이\n선정한 도서`;
+    : `교육 전문가들이 \n선정한 도서`;
   let description = `호두랩스의 교육 전문가들이 교과 수록,\n초등 필독 도서 등 아동 교육에 적합한 도서를\n직접 선정해요!`;
   if (isTablet)
     description = `호두랩스의 교육 전문가들이 교과 수록, 초등 필독 도서 등\n아동 교육에 적합한 도서를 직접 선정해요!`;
@@ -57,6 +57,8 @@ const CheckedBooksWrapInner = styled.div`
     flex-direction: row;
     max-width: 1200px;
     margin: 0px auto;
+    padding-left: 20px;
+    padding-right: 20px;
     margin-top: 150px;
     margin-bottom: 150px;
   }
