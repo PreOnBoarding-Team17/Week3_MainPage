@@ -1,16 +1,31 @@
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import CheckedBookItem from './CheckedBookItem';
 import { CheckedBookContents } from 'utils/constants';
+import { useScroll } from 'utils/hooks/useScroll';
+
+const CheckedYPos = [1680, 2870];
 
 const CheckedBookImage = () => {
+  const [checkedPageIn, setCheckedPageIn] = useState<boolean>(false);
+  const { scrollY } = useScroll();
+
+  useEffect(() => {
+    if (CheckedYPos[0] < scrollY && scrollY < CheckedYPos[1])
+      setCheckedPageIn(true);
+    else setCheckedPageIn(false);
+  }, [scrollY]);
+
   return (
     <Container>
       {CheckedBookContents.map((item, index) => {
         return (
           <CheckedBookItem
             key={index}
-            checked={item.checked}
+            checked={checkedPageIn ? item.checked : '(알수없음)'}
             book={item.book}
+            data={index}
+            pageIn={checkedPageIn}
           />
         );
       })}

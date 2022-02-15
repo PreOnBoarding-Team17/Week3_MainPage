@@ -53,9 +53,12 @@ const Footer = () => {
 };
 
 const Container = styled.div`
-  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
   padding: 0 20px;
   margin: 0 auto;
+  background-color: white;
   @media ${({ theme }) => theme.device.pc} {
     padding: 0 30px;
   }
