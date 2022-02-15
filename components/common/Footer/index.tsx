@@ -130,7 +130,7 @@ const Footer: React.FC = () => {
               return (
                 <FooterInfoContent key={text}>
                   {text}
-                  <Link href="/">
+                  <Link href="#">
                     <a>사업자 정보 조회</a>
                   </Link>
                 </FooterInfoContent>
@@ -147,7 +147,7 @@ const Footer: React.FC = () => {
               {list.map((text, index) => {
                 return (
                   <span key={text + index}>
-                    <Link href="">
+                    <Link href="#">
                       <a>{text}</a>
                     </Link>
                   </span>
