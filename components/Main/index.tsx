@@ -27,6 +27,7 @@ const Main = () => {
 const Container = styled.div`
   width: 100%;
   height: 100vh;
+  border: 0.1px solid transparent;
   background-image: url('assets/Main/main-tablet-bg.jpg');
   background-size: cover;
   background-position: center center;
