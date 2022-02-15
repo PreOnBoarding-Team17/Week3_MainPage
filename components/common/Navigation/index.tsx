@@ -1,14 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import { useScroll } from 'utils/hooks/useScroll';
 
 const Navigation: React.FC = () => {
+  const [menuBgToggle, setMenuBgToggle] = useState(false);
+  const { scrollY } = useScroll();
+
+  useEffect(() => {
+    scrollY > 0 ? setMenuBgToggle(true) : setMenuBgToggle(false);
+  }, [scrollY]);
+
   return (
-    <Nav>
+    <Nav toggle={menuBgToggle}>
       <NavWrap>
         <Logo>
-          <LogoImage src="assets/logo-white.png" alt="땅콩스쿨" />
+          {menuBgToggle ? (
+            <LogoImage src="assets/Navigation/logo-black.png" alt="땅콩스쿨" />
+          ) : (
+            <LogoImage src="assets/Navigation/logo-white.png" alt="땅콩스쿨" />
+          )}
         </Logo>
-        <FullMenu>
+        <FullMenu toggle={menuBgToggle}>
           <a href="#">도서구매</a>
           <div>
             <a href="#">장바구니</a>
@@ -17,7 +29,7 @@ const Navigation: React.FC = () => {
           <a href="#">이용권 관리</a>
           <a href="#">로그인/회원가입</a>
         </FullMenu>
-        <SmallMenu>
+        <SmallMenu toggle={menuBgToggle}>
           <div>
             <a href="#">
               <Icon src="assets/cart.png" alt="장바구니" />
@@ -32,7 +44,8 @@ const Navigation: React.FC = () => {
   );
 };
 
-const Nav = styled('nav')`
+const Nav = styled('nav')<{ toggle: boolean }>`
+  background-color: ${({ toggle }) => (toggle ? '#fff' : 'transparent')};
   position: fixed;
   top: 0;
   left: 0;
@@ -71,14 +84,15 @@ const LogoImage = styled('img')`
     width: 154.5px;
     height: 50px;
   }
+  // z-index: 10;
 `;
 
-const FullMenu = styled('div')`
+const FullMenu = styled('div')<{ toggle: boolean }>`
   display: none;
   align-items: center;
 
   & a {
-    color: white;
+    color: ${({ toggle }) => (toggle ? '#000' : '#fff')};
     text-decoration: none;
     font-size: 16px;
     margin-right: 50px;
@@ -90,7 +104,7 @@ const FullMenu = styled('div')`
 
   & > .partition {
     margin: 0px 50px 2px;
-    color: white;
+    color: ${({ toggle }) => (toggle ? '#000' : '#fff')};
     width: 1.5px;
     -webkit-box-align: center;
     align-items: center;
@@ -103,13 +117,13 @@ const FullMenu = styled('div')`
   }
 `;
 
-const SmallMenu = styled('div')`
+const SmallMenu = styled('div')<{ toggle: boolean }>`
   display: flex;
 
   align-items: center;
 
   & a {
-    color: white;
+    color: ${({ toggle }) => (toggle ? '#000' : '#fff')};
     text-decoration: none;
     font-size: 16px;
     margin-right: 50px;

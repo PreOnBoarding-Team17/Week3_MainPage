@@ -23,11 +23,11 @@ const gsapFunc = (y: number, elem: any) => {
   elem.style.opacity = '0';
   gsap.fromTo(
     elem,
-    { y: y, autoAlpha: 0 },
+    { y: y, opacity: 0 },
     {
       y: 0,
       duration: 1.5,
-      autoAlpha: 1,
+      opacity: 1,
       ease: 'ease-in-out',
       overwrite: 'auto',
     }
