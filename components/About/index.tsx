@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import { AboutText } from 'utils/constants';
 
@@ -8,15 +7,15 @@ interface AboutProps {
 
 const About = ({ isPc }: AboutProps) => {
   return (
-    <AboutContainer>
+    <Container>
       <Image src="/assets/second-logo.gif" alt="logo" />
-      <AboutTitle>땅콩스쿨이란?</AboutTitle>
-      <AboutContent>{AboutText(isPc)}</AboutContent>
-    </AboutContainer>
+      <Title>땅콩스쿨이란?</Title>
+      <Text>{AboutText(isPc)}</Text>
+    </Container>
   );
 };
 
-const AboutContainer = styled.div`
+const Container = styled.div`
   box-sizing: border-box;
   background-color: #ffb100;
   display: flex;
@@ -38,7 +37,7 @@ const Image = styled.img`
   }
 `;
 
-const AboutTitle = styled.div`
+const Title = styled.div`
   font-size: 30px;
   margin-bottom: 45px;
   @media ${({ theme }) => theme.device.tablet} {
@@ -47,7 +46,7 @@ const AboutTitle = styled.div`
   }
 `;
 
-const AboutContent = styled.div`
+const Text = styled.div`
   white-space: pre-wrap;
   text-align: center;
   font-size: 16px;

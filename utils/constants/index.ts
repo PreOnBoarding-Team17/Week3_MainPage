@@ -97,6 +97,46 @@ const AboutText = (isPc: boolean) => {
   }
 };
 
+const CheckedBooksTitle = (isPc: boolean, isTablet: boolean) => {
+  if (isPc) {
+    return `교육 전문가들이\n선정한 도서`;
+  } else if (isTablet) {
+    return `교육 전문가들이 선정한 도서`;
+  } else {
+    return `교육 전문가들이\n선정한 도서`;
+  }
+};
+
+const CheckedBooksText = (isPc: boolean, isTablet: boolean) => {
+  if (isPc)
+    return `호두랩스의 교육 전문가들이\n교과 수록, 초등 필독 도서 등\n아동 교육에 적합한 도서를\n직접 선정해요!`;
+  else if (isTablet)
+    return `호두랩스의 교육 전문가들이 교과 수록, 초등 필독 도서 등\n아동 교육에 적합한 도서를 직접 선정해요!`;
+  else
+    return `호두랩스의 교육 전문가들이 교과 수록,\n초등 필독 도서 등 아동 교육에 적합한 도서를\n직접 선정해요!`;
+};
+
+const CheckedBookContents = [
+  {
+    checked: 'assets/check-animation/first.gif',
+    book: 'assets/book1.png',
+  },
+  {
+    checked: 'assets/check-animation/second.gif',
+    book: 'assets/book2.png',
+  },
+  {
+    checked: 'assets/check-animation/third.gif',
+    book: 'assets/book3.png',
+  },
+];
+
+const MAIN_CONTENT_TEXT = [
+  ['책 읽는 재미,'],
+  ['땅콩스쿨이', '#fec442'],
+  ['만들어줄게요!'],
+];
+
 export {
   ReadingBooksTitle,
   ReadingBooksText,
@@ -110,4 +150,8 @@ export {
   LiveVideoTitle,
   LiveVideoText,
   AboutText,
+  CheckedBooksTitle,
+  CheckedBooksText,
+  CheckedBookContents,
+  MAIN_CONTENT_TEXT,
 };

@@ -1,17 +1,12 @@
 import styled, { keyframes } from 'styled-components';
+import { MAIN_CONTENT_TEXT } from 'utils/constants';
 
 const Main = () => {
-  const MAIN_CONTENT_TEXT = [
-    ['책 읽는 재미,'],
-    ['땅콩스쿨이', '#fec442'],
-    ['만들어줄게요!'],
-  ];
-
   return (
-    <MainContainer>
-      <MainContent>
+    <Container>
+      <Wrapper>
         {MAIN_CONTENT_TEXT.map((data) => (
-          <MainContentText key={data[0]} color={data[1]}>
+          <Title key={data[0]} color={data[1]}>
             {data[1] ? (
               <div>
                 <span>{data[0].substring(0, data[0].length - 1)}</span>
@@ -20,17 +15,16 @@ const Main = () => {
             ) : (
               data[0]
             )}
-          </MainContentText>
+          </Title>
         ))}
         <Image src="assets/main/star.png" alt="star" />
-      </MainContent>
-
+      </Wrapper>
       <MainImage></MainImage>
-    </MainContainer>
+    </Container>
   );
 };
 
-const MainContainer = styled.div`
+const Container = styled.div`
   width: 100%;
   height: 100vh;
   border: 0.1px solid #fff;
@@ -44,7 +38,7 @@ const MainContainer = styled.div`
     background-image: url('assets/main/main-bg.jpg');
   }
 `;
-const MainContent = styled.div`
+const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -66,7 +60,7 @@ const MainContent = styled.div`
   }
 `;
 
-const MainContentText = styled.span`
+const Title = styled.span`
   color: #fff;
   line-height: 1.4;
   span {
