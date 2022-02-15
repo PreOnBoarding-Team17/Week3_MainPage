@@ -25,9 +25,6 @@ const CheckedBookImage = () => {
             checked={checkedPageIn ? item.checked : '(알수없음)'}
             book={item.book}
             index={index}
-
-            // data={index}
-            // pageIn={checkedPageIn}
           />
         );
       })}

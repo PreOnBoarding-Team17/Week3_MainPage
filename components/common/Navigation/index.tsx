@@ -31,11 +31,21 @@ const Navigation: React.FC = () => {
         <SmallMenu toggle={menuBgToggle}>
           <div>
             <a href="#">
-              <Icon src="assets/cart.png" alt="장바구니" />
+              <Icon
+                src={menuBgToggle ? 'assets/cart-black.png' : 'assets/cart.png'}
+                alt="장바구니"
+              />
             </a>
           </div>
           <a href="#">
-            <Icon src="assets/hamburger.png" alt="메뉴" />
+            <Icon
+              src={
+                menuBgToggle
+                  ? 'assets/hamburger-black.png'
+                  : 'assets/hamburger.png'
+              }
+              alt="메뉴"
+            />
           </a>
         </SmallMenu>
       </NavWrap>
@@ -52,6 +62,7 @@ const Nav = styled('nav')<{ toggle: boolean }>`
   height: 60px;
   padding: 0 30px;
   z-index: 5;
+  transition: all 0.5s ease 0s;
   @media ${({ theme }) => theme.device.tablet} {
     height: 90px;
   }
