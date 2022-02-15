@@ -13,9 +13,7 @@ const Container = styled.h2`
   font-size: 30px;
   font-weight: bold;
   line-height: 1.47;
-  letter-spacing: normal;
   text-align: center;
-  color: rgb(51, 51, 51);
   @media ${({ theme }) => theme.device.tablet} {
     font-size: 50px;
     line-height: 1.44;
