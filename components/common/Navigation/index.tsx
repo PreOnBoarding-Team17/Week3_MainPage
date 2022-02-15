@@ -1,34 +1,30 @@
 import React from 'react';
 import styled from 'styled-components';
-import Image from 'next/image';
-import LogoWhite from 'public/assets/logo-white.png';
-import Cart from 'public/assets/cart.png';
-import Hamburger from 'public/assets/hamburger.png';
 
 const Navigation: React.FC = () => {
   return (
     <Nav>
       <NavWrap>
         <Logo>
-          <Image src={LogoWhite} alt="땅콩스쿨" />
+          <LogoImage src="assets/logo-white.png" alt="땅콩스쿨" />
         </Logo>
         <FullMenu>
-          <a href="javascript:void(0)">도서구매</a>
+          <a href="#">도서구매</a>
           <div>
-            <a href="javascript:void(0)">장바구니</a>
+            <a href="#">장바구니</a>
           </div>
           <div className="partition">|</div>
-          <a href="javascript:void(0)">이용권 관리</a>
-          <a href="javascript:void(0)">로그인/회원가입</a>
+          <a href="#">이용권 관리</a>
+          <a href="#">로그인/회원가입</a>
         </FullMenu>
         <SmallMenu>
           <div>
-            <a href="javascript:void(0)">
-              <Image src={Cart} width={24} height={24} alt="장바구니" />
+            <a href="#">
+              <Icon src="assets/cart.png" alt="장바구니" />
             </a>
           </div>
-          <a href="javascript:void(0)">
-            <Image src={Hamburger} width={24} height={24} alt="메뉴" />
+          <a href="#">
+            <Icon src="assets/hamburger.png" alt="메뉴" />
           </a>
         </SmallMenu>
       </NavWrap>
@@ -67,14 +63,11 @@ const NavWrap = styled('div')`
   }
 `;
 
-const Logo = styled('div')`
+const Logo = styled('div')``;
+const LogoImage = styled('img')`
   width: 112.2px;
   height: 36px;
   @media ${({ theme }) => theme.device.tablet} {
-    width: 154.5px;
-    height: 50px;
-  }
-  @media ${({ theme }) => theme.device.pc} {
     width: 154.5px;
     height: 50px;
   }
@@ -133,6 +126,11 @@ const SmallMenu = styled('div')`
   @media ${({ theme }) => theme.device.pc} {
     display: none;
   }
+`;
+
+const Icon = styled('img')`
+  width: 24px;
+  height: 24px;
 `;
 
 export default Navigation;
