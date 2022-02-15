@@ -16,6 +16,14 @@ const GlobalStyles = createGlobalStyle`
 		width: 320px;
     margin-top: 182px;
 		overflow: hidden;
+		@media screen and (min-width: 768px) {
+			width: 720px;
+    	margin-top: 290px;
+		}
+		@media screen and (min-width: 1200px) {
+			width: 820px;
+    	margin-top: 290px;
+		}
 	}
 
 	.swiper-wrapper {
@@ -28,6 +36,10 @@ const GlobalStyles = createGlobalStyle`
 	}
 	.swiper-slide {
 		width: 100vw;
+
+		@media screen and (min-width: 768px) {
+			width: 720px;
+		}
 	}
 	`;
 

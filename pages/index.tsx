@@ -7,12 +7,10 @@ import LiveVideo from 'components/LiveVideo';
 import CheckedBooks from 'components/CheckedBooks';
 import ReadingBooks from 'components/ReadingBooks';
 import ReadingDiary from 'components/ReadingDiary';
-
 import BestSeller from 'components/BestSeller';
 import Feature from 'components/Feature';
 import Review from 'components/Review';
 import Download from 'components/Download';
-
 import Footer from 'components/common/Footer';
 import useMedia from 'utils/hooks/useMedia';
 
