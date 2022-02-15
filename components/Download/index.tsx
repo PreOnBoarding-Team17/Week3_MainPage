@@ -39,12 +39,15 @@ const Download = ({ isPc }: DownloadProps) => {
             </ContentLeft>
             <ContentRight>
               <ContentRightText
+                data-aos="new-animation"
+                data-aos-delay="900"
                 fontSize={DOWNLOAD_CONTENT_TEXT[2].fontSize}
                 lineHeight={DOWNLOAD_CONTENT_TEXT[2].lineHeight}
               >
                 {DOWNLOAD_CONTENT_TEXT[2].text}
               </ContentRightText>
-              <Button>
+
+              <Button data-aos="new-animation">
                 <ButtonImage
                   src="assets/Download/download-btn.png"
                   alt="download"
@@ -161,13 +164,38 @@ const ContentRight = styled(ContentLeft)`
 `;
 
 const ContentRightText = styled(ContentText)`
+  position: relative;
+
   color: #fff;
   font-size: 13px;
   width: 200px;
   height: 40px;
-  background-color: #725801;
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 50px;
   padding: 5px 10px;
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -9px;
+    left: 90px;
+    background-image: url('/assets/Download/triangle.png');
+    width: 10px;
+    height: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &[data-aos='new-animation'] {
+    transition-property: transform, opacity;
+    opacity: 0;
+    transform: translateY(-20px);
+
+    &.aos-animate {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
 `;
 
 const Button = styled.button`
@@ -186,6 +214,15 @@ const Button = styled.button`
     padding: 35px 30px;
     margin-top: 30px;
     border-radius: 10px;
+  }
+
+  &[data-aos='new-animation'] {
+    transition-property: transform, opacity;
+    transform: translateY(-30px);
+
+    &.aos-animate {
+      transform: translateX(0);
+    }
   }
 `;
 

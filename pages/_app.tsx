@@ -18,6 +18,32 @@ const AOSCONFIG: AOS.AosOptions = {
   easing: 'ease-in-out',
 };
 
+const delayGifFunc = (elem: any) => {
+  let delay = 0;
+  elem.style.opacity = '0';
+
+  if (elem.src) {
+    elem.src = elem.src.substring(0, elem.src.length - 3) + 'gif';
+
+    if (elem.dataset) {
+      delay = elem.dataset.index * 0.25;
+    }
+  }
+
+  gsap.fromTo(
+    elem,
+    { opacity: 0, autoAlpha: 0 },
+    {
+      duration: 1.5,
+      delay: delay,
+      opacity: 1,
+      autoAlpha: 1,
+      ease: 'ease-in-out',
+      overwrite: 'auto',
+    }
+  );
+};
+
 const gsapFunc = (y: number, elem: any) => {
   elem.style.transform = `translate(0px, ${y}px)`;
   elem.style.opacity = '0';
@@ -57,15 +83,16 @@ function MyApp({ Component, pageProps }: AppProps) {
       });
     });
 
-    const gif = gsap.utils.toArray('.gif');
-    gif.forEach((elem: any) => {
+    const deplayGif = gsap.utils.toArray('.gif');
+    deplayGif.forEach((elem: any) => {
       ScrollTrigger.create({
         trigger: elem,
-        onEnter: (elem) => {
-          gsap.fromTo(elem, { autoAlpha: 0 }, { duration: 1, autoAlpha: 1 });
+        onEnter: () => {
+          delayGifFunc(elem);
         },
+        scrub: true,
         onEnterBack: () => {
-          gsap.fromTo(elem, { autoAlpha: 0 }, { duration: 1, autoAlpha: 1 });
+          delayGifFunc(elem);
         },
       });
     });
