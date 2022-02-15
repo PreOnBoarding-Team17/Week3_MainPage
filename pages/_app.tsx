@@ -54,9 +54,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         onEnterBack: () => {
           gsapFunc(-100, elem);
         },
-        // onLeave: (elem) => {
-        //   gsap.set(elem, { opacity: 0 });
-        // },
       });
     });
 
@@ -65,15 +62,11 @@ function MyApp({ Component, pageProps }: AppProps) {
       ScrollTrigger.create({
         trigger: elem,
         onEnter: (elem) => {
-          console.log(elem);
           gsap.fromTo(elem, { autoAlpha: 0 }, { duration: 1, autoAlpha: 1 });
         },
         onEnterBack: () => {
           gsap.fromTo(elem, { autoAlpha: 0 }, { duration: 1, autoAlpha: 1 });
         },
-        // onLeave: (elem) => {
-        //   gsap.set(elem, { autoAlpha: 0 });
-        // },
       });
     });
   }, []);
