@@ -9,7 +9,7 @@
 
 <br/>
 
-[🌍 배포 링크]()
+[🌍 배포 링크](https://17seoul-mainpage.netlify.app/)
 
 <br />
 
@@ -105,11 +105,25 @@
 
 [풀리퀘스트 링크](https://github.com/PreOnBoarding-Team17/Week3_MainPage/pulls?q=is%3Apr+is%3Aclosed)
 
+<img width="1068" alt="스크린샷 2022-02-15 오후 11 03 10" src="https://user-images.githubusercontent.com/98322239/154154222-03aa2fbb-c7d3-497e-ae05-f33770902704.png">
+
+
 <br/>
 
 ### [3] 이슈를 작성해 서로의 진행상황을 공유했습니다 👀
 
 [이슈 링크](https://github.com/PreOnBoarding-Team17/Week3_MainPage/issues)
+
+<img width="1277" alt="스크린샷 2022-02-15 오후 11 02 01" src="https://user-images.githubusercontent.com/98322239/154154197-4970658d-06b3-445e-bad8-8f46e8b6ba9b.png">
+
+<br/>
+
+### [4] cypress로 팀원들과 E2E 테스트를 진행했습니다 🧪
+
+[테스트코드 링크](https://github.com/PreOnBoarding-Team17/Week3_MainPage/tree/dev/cypress/integration)
+
+![스크린샷 2022-02-16 오전 6 41 03](https://user-images.githubusercontent.com/98322239/154154389-6a2b8e60-49a8-437e-bf6e-7acf0dc10da8.png)
+
 
 <br/>
 
