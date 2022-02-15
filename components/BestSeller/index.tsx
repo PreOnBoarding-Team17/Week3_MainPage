@@ -1,4 +1,5 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
+import BookList from 'components/BestSeller/BookList';
 
 interface BestSellerProps {
   isTablet: boolean;
@@ -13,7 +14,6 @@ const BestSeller = ({ isTablet }: BestSellerProps) => {
     ? `매달 새로운 32권의 어린이 베스트 셀러를 만날 수 있어요.\n독서를 통해 배움의 즐거움을 알아가 보세요.`
     : `매달 새로운 32권의\n어린이 베스트 셀러를 만날 수 있어요.\n독서를 통해 배움의 즐거움을 알아가 보세요.`;
 
-  const imageNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
   return (
     <Container>
       <TextContainer>
@@ -22,46 +22,12 @@ const BestSeller = ({ isTablet }: BestSellerProps) => {
       </TextContainer>
       <ImageContainer>
         <ImageWrapper>
-          <ImageContents>
-            {imageNumber.map((element) => (
-              <Image
-                key={element}
-                src={`assets/BestSeller/img_book_${element}.png`}
-                alt={`이미지${element}`}
-              />
-            ))}
-          </ImageContents>
-          <ImageContents>
-            {imageNumber.map((element) => (
-              <Image
-                key={element}
-                src={`assets/BestSeller/img_book_${element}.png`}
-                alt={`이미지${element}`}
-              />
-            ))}
-          </ImageContents>
+          <BookList />
         </ImageWrapper>
       </ImageContainer>
     </Container>
   );
 };
-
-const slider = keyframes`
-      from {
-      transform: translate(0px, 0px);
-    }
-    to {
-      transform: translate(-3570px, 0px);
-    }
-`;
-const slider_mobile = keyframes`
-      from {
-      transform: translate(0px, 0px);
-    }
-    to {
-      transform: translate(-1755px, 0px);
-    }
-`;
 
 const Container = styled.section`
   display: flex;
@@ -127,31 +93,6 @@ const ImageWrapper = styled.div`
   @media ${({ theme }) => theme.device.pc} {
     height: 250px;
     width: 3570px;
-  }
-`;
-
-const ImageContents = styled.div`
-  width: 1755px;
-  flex-direction: row;
-  position: absolute;
-  animation: 24s linear 0s infinite normal none running ${slider_mobile};
-  @media ${({ theme }) => theme.device.tablet} {
-    width: 3570px;
-    animation: 24s linear 0s infinite normal none running ${slider};
-  }
-`;
-
-const Image = styled.img`
-  background-position: center center;
-  background-size: cover;
-  margin-left: 15px;
-  height: 135px;
-  display: inline-block;
-  width: 102px !important;
-  @media ${({ theme }) => theme.device.tablet} {
-    margin-left: 50px;
-    height: 250px;
-    width: 188px !important;
   }
 `;
 
