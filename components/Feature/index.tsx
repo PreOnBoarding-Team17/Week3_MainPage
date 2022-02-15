@@ -1,11 +1,19 @@
 import styled from 'styled-components';
+import Card from 'components/Feature/Card';
 
-const Feature = () => {
+interface FeatureProps {
+  isPc: boolean;
+  isTablet: boolean;
+}
+
+const Feature = ({ isPc, isTablet }: FeatureProps) => {
   return (
     <Container>
       <Wrapper>
         <Title>땅콩스쿨만의 특징</Title>
-        <ImageContainer></ImageContainer>
+        <ImageContainer>
+          <Card isPc={isPc} isTablet={isTablet} />
+        </ImageContainer>
       </Wrapper>
     </Container>
   );
