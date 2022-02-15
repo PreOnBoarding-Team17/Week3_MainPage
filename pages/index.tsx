@@ -26,7 +26,7 @@ const Home: NextPage = () => {
       <ReadingBooks isTablet={isTablet} />
       <ReadingDiary isPc={isPc} isTablet={isTablet} />
       <BestSeller isTablet={isTablet} />
-      <Feature />
+      <Feature isPc={isPc} isTablet={isTablet} />
       <Footer />
       <DownloadButton />
     </div>
