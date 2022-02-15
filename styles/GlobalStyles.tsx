@@ -6,6 +6,13 @@ const GlobalStyles = createGlobalStyle`
 	html {
 		font-family: 'Noto Sans KR', sans-serif;
 	}
+
+	.swiper-wrapper {
+		width: 100%;
+	}
+	.swiper-slide {
+		width: 100vw;
+	}
 	`;
 
 export default GlobalStyles;
