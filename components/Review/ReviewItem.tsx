@@ -33,7 +33,6 @@ const ReviewItemContainer = styled.div`
 `;
 const ReviewUserId = styled.div`
   text-align: start;
-  // text-align: center;
   opacity: 0.8;
   font-size: 12px;
   font-weight: normal;
