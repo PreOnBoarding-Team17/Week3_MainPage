@@ -9,16 +9,22 @@ interface ReadingBooksProps {
 
 const ReadingBooks = ({ isTablet }: ReadingBooksProps) => {
   return (
-    <Container>
+    <Container data-test-id="ReadingBooks">
       <Wrapper>
         <Contents>
-          <TextContainer>
+          <TextContainer data-test-id="ReadingBooks:TextContainer">
             <Title title={ReadingBooksTitle(isTablet)} />
             <Text text={ReadingBooksText(isTablet)} />
           </TextContainer>
           <ImageContainer>
-            <Tablet src="assets/ReadingBooks/tablet.png" />
-            <Mobile src="assets/ReadingBooks/phone.png" />
+            <Tablet
+              data-test-id="ReadingBooks:Tablet"
+              src="assets/ReadingBooks/tablet.png"
+            />
+            <Mobile
+              data-test-id="ReadingBooks:Mobile"
+              src="assets/ReadingBooks/phone.png"
+            />
           </ImageContainer>
         </Contents>
       </Wrapper>

@@ -13,8 +13,12 @@ const LiveVideo = ({ isPc }: LiveVideoProps) => {
           <TextContainer>
             <TextWrapper>
               <TextBox>
-                <Title className="fade-up">{LiveVideoTitle(isPc)}</Title>
-                <Text className="fade-up">{LiveVideoText(isPc)}</Text>
+                <Title className="fade-up" data-test-id="LiveVideo:Title">
+                  {LiveVideoTitle(isPc)}
+                </Title>
+                <Text className="fade-up" data-test-id="LiveVideo:Text">
+                  {LiveVideoText(isPc)}
+                </Text>
               </TextBox>
             </TextWrapper>
           </TextContainer>

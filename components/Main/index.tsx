@@ -4,7 +4,7 @@ import { MAIN_CONTENT_TEXT } from 'utils/constants';
 const Main = () => {
   return (
     <Container>
-      <Wrapper>
+      <Wrapper data-test-id="Main:text">
         {MAIN_CONTENT_TEXT.map((data) => (
           <Title key={data[0]} color={data[1]}>
             {data[1] ? (
@@ -17,9 +17,9 @@ const Main = () => {
             )}
           </Title>
         ))}
-        <Image src="assets/Main/star.png" alt="star" />
+        <Image src="assets/Main/star.png" alt="star" data-test-id="Main:star" />
       </Wrapper>
-      <MainImage></MainImage>
+      <MainImage data-test-id="Main:mouse"></MainImage>
     </Container>
   );
 };

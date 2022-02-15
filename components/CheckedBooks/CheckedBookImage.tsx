@@ -22,7 +22,7 @@ const CheckedBookImage = () => {
         return (
           <CheckedBookItem
             key={index}
-            checked={checkedPageIn ? item.checked : '(알수없음)'}
+            checked={checkedPageIn ? item.checked : ''}
             book={item.book}
             index={index}
           />

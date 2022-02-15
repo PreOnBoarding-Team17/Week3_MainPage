@@ -12,7 +12,7 @@ const Feature = ({ isPc, isTablet }: FeatureProps) => {
     <Container>
       <Wrapper>
         <Title title="땅콩스쿨만의 특징" />
-        <ImageContainer>
+        <ImageContainer data-test-id="Feature">
           <Card isPc={isPc} isTablet={isTablet} />
         </ImageContainer>
       </Wrapper>

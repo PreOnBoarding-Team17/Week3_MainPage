@@ -7,13 +7,14 @@ interface AboutProps {
 
 const About = ({ isPc }: AboutProps) => {
   return (
-    <Container>
+    <Container data-test-id="About">
       <div>
         <Image
           className="fade-up gif"
           src="/assets/About/second-logo.png"
           alt="logo"
           loading="lazy"
+          data-test-id="About:logo"
         />
       </div>
       <Title className="fade-up">땅콩스쿨이란?</Title>

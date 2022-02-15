@@ -10,7 +10,7 @@ interface BestSellerProps {
 
 const BestSeller = ({ isTablet }: BestSellerProps) => {
   return (
-    <Container>
+    <Container data-test-id="BestSeller">
       <TextContainer>
         <Title title={BestSellerTitle(isTablet)} />
         <Text text={BestSellerText(isTablet)} />

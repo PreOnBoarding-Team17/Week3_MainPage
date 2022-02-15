@@ -25,15 +25,17 @@ const Card = ({ isPc, isTablet }: CardProps) => {
       {cardList.map((element) => (
         <Container
           key={element}
+          data-test-id="Feature:Card"
           data-aos="fade-up"
           data-aos-delay={`${element * 500}`}
         >
           <Icon
+            data-test-id="Feature:CardIcon"
             src={`assets/Feature/Icon_${element}.png`}
             alt={`이미지 ${element}`}
           />
-          <Title>{title[element - 1]}</Title>
-          <Text>{text(element)}</Text>
+          <Title data-test-id="Feature:CardTitle">{title[element - 1]}</Title>
+          <Text data-test-id="Feature:CardText">{text(element)}</Text>
         </Container>
       ))}
     </>

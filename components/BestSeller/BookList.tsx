@@ -4,18 +4,20 @@ const BookList = () => {
   const imageNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
   return (
     <>
-      <LeftContainer>
+      <LeftContainer data-test-id="BestSeller:ImageContainer">
         {imageNumber.map((element) => (
           <Image
+            data-test-id="BestSeller:Image"
             key={element}
             src={`assets/BestSeller/img_book_${element}.png`}
             alt={`이미지${element}`}
           />
         ))}
       </LeftContainer>
-      <RightContainer>
+      <RightContainer data-test-id="BestSeller:ImageContainer">
         {imageNumber.map((element) => (
           <Image
+            data-test-id="BestSeller:Image"
             key={element}
             src={`assets/BestSeller/img_book_${element}.png`}
             alt={`이미지${element}`}

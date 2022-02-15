@@ -10,14 +10,18 @@ interface ReadingDiaryProps {
 
 const ReadingDiary = ({ isPc, isTablet }: ReadingDiaryProps) => {
   return (
-    <Container>
+    <Container data-test-id="ReadingDiary">
       <Wrapper>
-        <TextContainer>
+        <TextContainer data-test-id="ReadingDiary:TextContainer">
           <Title title={ReadingDiaryTitle(isTablet)} />
           <Text text={ReadingDiaryText(isPc, isTablet)} />
         </TextContainer>
         <ImageContainer>
-          <Image src="assets/ReadingDiary/Diary.png" alt="독서 일기 이미지" />
+          <Image
+            data-test-id="ReadingDiary:Image"
+            src="assets/ReadingDiary/Diary.png"
+            alt="독서 일기 이미지"
+          />
         </ImageContainer>
       </Wrapper>
     </Container>

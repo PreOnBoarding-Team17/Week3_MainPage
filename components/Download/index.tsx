@@ -21,7 +21,7 @@ const Download = ({ isPc }: DownloadProps) => {
       <Wrapper>
         <Title className="fade-up">{DONWLOAD_TITLE}</Title>
         <ContentsContainer>
-          <ContentsWrapper>
+          <ContentsWrapper data-test-id="Download:coupon">
             <ContentLeft>
               <Image src="assets/Download/logo-white.png" alt="coupon" />
               {DOWNLOAD_CONTENT_TEXT.map((text, index) => {
