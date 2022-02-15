@@ -9,6 +9,7 @@
     "cypress:open": "cypress open"
   },
   "dependencies": {
+    "babel-plugin-styled-components": "^2.0.2",
     "@types/aos": "^3.0.4",
     "@types/gsap": "^3.0.0",
     "aos": "^2.3.4",
@@ -17,7 +18,8 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-responsive": "^9.0.0-beta.6",
-    "styled-components": "^5.3.3"
+    "styled-components": "^5.3.3",
+    "swiper": "^8.0.6"
   },
   "devDependencies": {
     "@types/node": "17.0.17",
