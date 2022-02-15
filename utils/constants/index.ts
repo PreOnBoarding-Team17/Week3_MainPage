@@ -118,16 +118,16 @@ const CheckedBooksText = (isPc: boolean, isTablet: boolean) => {
 
 const CheckedBookContents = [
   {
-    checked: 'assets/check-animation/first.gif',
-    book: 'assets/book1.png',
+    checked: '/assets/check-animation/first.gif',
+    book: '/assets/book1.png',
   },
   {
-    checked: 'assets/check-animation/second.gif',
-    book: 'assets/book2.png',
+    checked: '/assets/check-animation/second.gif',
+    book: '/assets/book2.png',
   },
   {
-    checked: 'assets/check-animation/third.gif',
-    book: 'assets/book3.png',
+    checked: '/assets/check-animation/third.gif',
+    book: '/assets/book3.png',
   },
 ];
 
