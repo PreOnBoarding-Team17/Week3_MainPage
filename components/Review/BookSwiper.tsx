@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
-import { Autoplay, Pagination, Navigation } from 'swiper';
+import { Autoplay } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -90,29 +90,59 @@ const BookSwiper: React.FC = () => {
 
   return (
     <SwiperWrap>
+      <SwiperPrevBtn>
+        <Icon src="assets/prev.png" alt="prev" />
+      </SwiperPrevBtn>
+
       <Swiper
         centeredSlides={true}
-        autoplay={{ delay: 2500, disableOnInteraction: false }}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[Autoplay, Pagination, Navigation]}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        loop={true}
+        modules={[Autoplay]}
+        className="review-swiper"
       >
         {reviews.map((review, index) => {
           return (
             <SwiperSlide key={index}>
-              <ReviewItem content={review.content} />
+              <ReviewItem userId={review.name} content={review.content} />
             </SwiperSlide>
           );
         })}
       </Swiper>
+      <SwiperNextBtn>
+        <Icon src="assets/next.png" alt="next" />
+      </SwiperNextBtn>
     </SwiperWrap>
   );
 };
 
 const SwiperWrap = styled.div`
+  position: relative;
   width: 100%;
+`;
+
+const SwiperPrevBtn = styled.button`
+  position: absolute;
+  z-index: 4;
+  cursor: pointer;
+  top: 113px;
+  left: 20px;
+  background-color: transparent;
+  border: none;
+`;
+const SwiperNextBtn = styled.button`
+  position: absolute;
+  z-index: 4;
+  cursor: pointer;
+  top: 112px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+`;
+
+const Icon = styled.img`
+  width: 40px;
+  height: 40px;
 `;
 
 export default BookSwiper;
