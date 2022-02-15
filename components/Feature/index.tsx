@@ -49,6 +49,7 @@ const Wrapper = styled.div`
 const ImageContainer = styled.div`
   margin-bottom: 50px;
   overflow-x: hidden;
+  overflow-y: hidden;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

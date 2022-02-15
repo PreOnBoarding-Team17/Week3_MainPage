@@ -34,7 +34,7 @@ const Footer = () => {
               {list.map((text, index) => {
                 return (
                   <span key={text + index}>
-                    <Link href="">
+                    <Link href="#">
                       <a>{text}</a>
                     </Link>
                   </span>
@@ -53,9 +53,12 @@ const Footer = () => {
 };
 
 const Container = styled.div`
-  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
   padding: 0 20px;
   margin: 0 auto;
+  background-color: white;
   @media ${({ theme }) => theme.device.pc} {
     padding: 0 30px;
   }
@@ -131,6 +134,7 @@ const MenuList = styled.div`
 `;
 
 const Image = styled.img`
+  cursor: pointer;
   width: 44px;
   height: 44px;
   margin-right: 12px;

@@ -61,8 +61,8 @@ const Image = styled.img`
   width: 360px;
   height: 220px;
   @media ${({ theme }) => theme.device.tablet} {
-    width: 873px;
-    height: 480px;
+    width: 700px;
+    height: 380px;
   }
   @media ${({ theme }) => theme.device.pc} {
     width: 1139px;

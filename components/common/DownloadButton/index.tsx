@@ -13,6 +13,7 @@ const DownloadButton: React.FC = () => {
 };
 
 const ButtonWrap = styled('div')`
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: center;
