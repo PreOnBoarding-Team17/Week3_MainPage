@@ -75,7 +75,9 @@ const NavWrap = styled('div')`
   }
 `;
 
-const Logo = styled('div')``;
+const Logo = styled('div')`
+  cursor: pointer;
+`;
 const LogoImage = styled('img')`
   width: 112.2px;
   height: 36px;

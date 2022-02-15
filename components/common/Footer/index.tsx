@@ -34,7 +34,7 @@ const Footer = () => {
               {list.map((text, index) => {
                 return (
                   <span key={text + index}>
-                    <Link href="">
+                    <Link href="#">
                       <a>{text}</a>
                     </Link>
                   </span>
@@ -134,6 +134,7 @@ const MenuList = styled.div`
 `;
 
 const Image = styled.img`
+  cursor: pointer;
   width: 44px;
   height: 44px;
   margin-right: 12px;
