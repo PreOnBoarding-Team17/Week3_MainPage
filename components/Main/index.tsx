@@ -8,16 +8,16 @@ const Main = () => {
         {MAIN_CONTENT_TEXT.map((data) => (
           <Title key={data[0]} color={data[1]}>
             {data[1] ? (
-              <div>
+              <div className="fade-up">
                 <span>{data[0].substring(0, data[0].length - 1)}</span>
                 {data[0][data[0].length - 1]}
               </div>
             ) : (
-              data[0]
+              <div className="fade-up">{data[0]}</div>
             )}
           </Title>
         ))}
-        <Image src="assets/main/star.png" alt="star" />
+        <Image src="assets/Main/star.png" alt="star" />
       </Wrapper>
       <MainImage></MainImage>
     </Container>
@@ -28,14 +28,14 @@ const Container = styled.div`
   width: 100%;
   height: 100vh;
   border: 0.1px solid #fff;
-  background-image: url('assets/main/main-tablet-bg.jpg');
+  background-image: url('assets/Main/main-tablet-bg.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   margin: 0 auto;
   @media ${({ theme }) => theme.device.tablet} {
     background-position: 75% center;
-    background-image: url('assets/main/main-bg.jpg');
+    background-image: url('assets/Main/main-bg.jpg');
   }
 `;
 const Wrapper = styled.div`
@@ -108,7 +108,7 @@ const MainImage = styled.div`
   left: 47.5%;
   bottom: 50px;
   animation: 0.7s ease-in 0s infinite alternate none running ${mouseMove};
-  background-image: url('assets/mouse.png');
+  background-image: url('assets/Main/mouse.png');
   background-size: cover;
   @media ${({ theme }) => theme.device.tablet} {
     height: 72px;
