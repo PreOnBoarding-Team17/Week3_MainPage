@@ -7,6 +7,8 @@ import LiveVideo from 'components/LiveVideo';
 import CheckedBooks from 'components/CheckedBooks';
 import ReadingBooks from 'components/ReadingBooks';
 import ReadingDiary from 'components/ReadingDiary';
+import Footer from 'components/common/Footer';
+
 import useMedia from 'utils/hooks/useMedia';
 
 const Home: NextPage = () => {
@@ -17,11 +19,13 @@ const Home: NextPage = () => {
       <Navigation />
       <DownloadButton />
       <Main />
-      <About />
+      <About isPc={isPc} />
       <LiveVideo isPc={isPc} />
       <CheckedBooks isTablet={isTablet} isPc={isPc} />
       <ReadingBooks isTablet={isTablet} />
       <ReadingDiary isPc={isPc} isTablet={isTablet} />
+      <Footer />
+      <DownloadButton />
     </div>
   );
 };
