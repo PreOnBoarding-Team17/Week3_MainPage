@@ -18,7 +18,6 @@ const ReviewItem: React.FC<ReviewItemProps> = ({ userId, content }) => {
 const ReviewItemContainer = styled.div`
   display: flex;
   flex-direction: column;
-  -webkit-box-align: center;
   align-items: center;
   box-sizing: border-box;
   border-radius: 24px;
