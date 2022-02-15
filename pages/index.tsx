@@ -6,6 +6,8 @@ import DownloadButton from 'components/common/DownloadButton';
 import LiveVideo from 'components/LiveVideo';
 import ReadingBooks from 'components/ReadingBooks';
 import ReadingDiary from 'components/ReadingDiary';
+import Footer from 'components/common/Footer';
+
 import useMedia from 'utils/hooks/useMedia';
 
 const Home: NextPage = () => {
@@ -15,11 +17,12 @@ const Home: NextPage = () => {
     <div>
       <Navigation />
       <Main />
-      <About />
-      <DownloadButton />
+      <About isPc={isPc} />
       <LiveVideo isPc={isPc} />
       <ReadingBooks isTablet={isTablet} />
       <ReadingDiary isPc={isPc} isTablet={isTablet} />
+      <Footer />
+      <DownloadButton />
     </div>
   );
 };
