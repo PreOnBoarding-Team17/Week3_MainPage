@@ -25,13 +25,13 @@
 
 - [x] 현재 게시되어 있는 [땅콩스쿨 홈페이지](https://ddangkongschool.com/)의 메인 화면과 동일한 레이아웃 구현
 - [x] 홈페이지와 동일한 반응형 디자인
-- [x] 북클래스 페이지에서 태블릿 이미지 내부에 영상 자동 재생
-- [x] 소개 페이지에 애니메이션이 재생되는 로고 GIF 추가
-- [x] 전문자 페이지에 순서대로 체크 이미지가 나오는 애니메이션
-- [x] 베스트셀러 페이지에서 도서 이미지가 우에서 좌로 무한히 흐르는 형태의 애니메이션
-- [x] 특징 페이지에서 좌 -> 우로 책갈피가 순서대로 나오는 애니메이션
-- [x] 리뷰 페이지에서 좌/우 버튼을 통한 전환, 무한 로테이션
-- [x] 다운로드 페이지에서 버튼이 내려가고 말풍선이 나오는 애니메이션
+- [x] [북클래스 페이지](https://github.com/PreOnBoarding-Team17/Week3_MainPage/blob/dev/components/LiveVideo/index.tsx)에서 태블릿 이미지 내부에 영상 자동 재생
+- [x] [소개 페이지](https://github.com/PreOnBoarding-Team17/Week3_MainPage/blob/dev/components/About/index.tsx)에 애니메이션이 재생되는 로고 GIF 추가
+- [x] [전문가 페이지](https://github.com/PreOnBoarding-Team17/Week3_MainPage/tree/dev/components/CheckedBooks)에 순서대로 체크 이미지가 나오는 애니메이션
+- [x] [베스트셀러 페이지](https://github.com/PreOnBoarding-Team17/Week3_MainPage/tree/dev/components/BestSeller)에서 도서 이미지가 우에서 좌로 무한히 흐르는 형태의 애니메이션
+- [x] [특징 페이지](https://github.com/PreOnBoarding-Team17/Week3_MainPage/tree/dev/components/Feature)에서 좌 -> 우로 책갈피가 순서대로 나오는 애니메이션
+- [x] [리뷰 페이지](https://github.com/PreOnBoarding-Team17/Week3_MainPage/tree/dev/components/Review)에서 좌/우 버튼을 통한 전환, 무한 로테이션
+- [x] [다운로드 페이지](https://github.com/PreOnBoarding-Team17/Week3_MainPage/tree/dev/components/Download)에서 버튼이 내려가고 말풍선이 나오는 애니메이션
 
 <br />
 
