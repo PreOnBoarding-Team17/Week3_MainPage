@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import BookList from 'components/BestSeller/BookList';
+import Title from 'components/common/Title';
 
 interface BestSellerProps {
   isTablet: boolean;
@@ -17,7 +18,7 @@ const BestSeller = ({ isTablet }: BestSellerProps) => {
   return (
     <Container>
       <TextContainer>
-        <Title>{title}</Title>
+        <Title title={title} />
         <Text>{text}</Text>
       </TextContainer>
       <ImageContainer>
@@ -43,20 +44,6 @@ const TextContainer = styled.div`
   margin-top: 100px;
   @media ${({ theme }) => theme.device.tablet} {
     margin-top: 150px;
-  }
-`;
-
-const Title = styled.h2`
-  white-space: pre-wrap;
-  font-size: 30px;
-  font-weight: bold;
-  line-height: 1.47;
-  letter-spacing: normal;
-  text-align: center;
-  color: rgb(51, 51, 51);
-  @media ${({ theme }) => theme.device.tablet} {
-    font-size: 50px;
-    line-height: 1.44;
   }
 `;
 

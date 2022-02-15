@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Title from 'components/common/Title';
 
 interface ReadingDiaryProps {
   isPc: boolean;
@@ -24,7 +25,7 @@ const ReadingDiary = ({ isPc, isTablet }: ReadingDiaryProps) => {
     <Container>
       <Wrapper>
         <TextContainer>
-          <Title>{title}</Title>
+          <Title title={title} />
           <Text>{text()}</Text>
         </TextContainer>
         <ImageContainer>
@@ -57,20 +58,6 @@ const Wrapper = styled.div`
 `;
 
 const TextContainer = styled.div``;
-
-const Title = styled.h2`
-  white-space: pre-wrap;
-  font-size: 30px;
-  font-weight: bold;
-  line-height: 1.47;
-  letter-spacing: normal;
-  text-align: center;
-  color: rgb(51, 51, 51);
-  @media ${({ theme }) => theme.device.tablet} {
-    font-size: 50px;
-    line-height: 1.44;
-  }
-`;
 
 const Text = styled.p`
   padding-top: 30px;

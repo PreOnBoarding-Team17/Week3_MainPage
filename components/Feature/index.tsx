@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Card from 'components/Feature/Card';
+import Title from 'components/common/Title';
 
 interface FeatureProps {
   isPc: boolean;
@@ -10,7 +11,7 @@ const Feature = ({ isPc, isTablet }: FeatureProps) => {
   return (
     <Container>
       <Wrapper>
-        <Title>땅콩스쿨만의 특징</Title>
+        <Title title="땅콩스쿨만의 특징" />
         <ImageContainer>
           <Card isPc={isPc} isTablet={isTablet} />
         </ImageContainer>
@@ -44,18 +45,6 @@ const Wrapper = styled.div`
   @media ${({ theme }) => theme.device.tablet} {
     margin-top: 150px;
     padding: 0 30px;
-  }
-`;
-
-const Title = styled.h2`
-  white-space: pre-wrap;
-  font-size: 30px;
-  font-weight: bold;
-  letter-spacing: normal;
-  text-align: center;
-  color: rgb(51, 51, 51);
-  @media ${({ theme }) => theme.device.tablet} {
-    font-size: 50px;
   }
 `;
 
