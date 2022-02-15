@@ -21,9 +21,7 @@ const Feature = ({ isPc, isTablet }: FeatureProps) => {
 };
 
 const Container = styled.section`
-  overflow-y: hidden;
   background-color: rgb(249, 249, 249);
-  overflow-x: hidden;
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -55,18 +53,15 @@ const ImageContainer = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  margin-top: 40px;
-  margin-bottom: 50px;
+  margin: 40px 0 50px 0;
   @media ${({ theme }) => theme.device.tablet} {
     width: 100%;
     flex-direction: column;
-    margin-top: 40px;
-    margin-bottom: 101px;
+    margin: 40px 0 101px 0;
   }
   @media ${({ theme }) => theme.device.pc} {
     width: 1380px;
-    margin-top: 80px;
-    margin-bottom: 0px;
+    margin: 80px 0 0 0;
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;

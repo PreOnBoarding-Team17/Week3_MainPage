@@ -1,26 +1,20 @@
 import styled from 'styled-components';
 import Title from 'components/common/Title';
+import Text from 'components/common/Text';
+import { ReadingBooksTitle, ReadingBooksText } from 'utils/constants';
 
 interface ReadingBooksProps {
   isTablet: boolean;
 }
 
 const ReadingBooks = ({ isTablet }: ReadingBooksProps) => {
-  const title = isTablet
-    ? `실시간 방송 형태로 제공되는\n 신개념 책 읽기`
-    : `실시간 방송 형태로\n 제공되는\n 신개념 책 읽기`;
-
-  const text = isTablet
-    ? `방송 중이라면 언제든 접속하세요.\n 수강신청, 수업예약 없이 편하게 수업참여가 가능해요.`
-    : `방송 중이라면 언제든 접속하세요.\n 수강신청, 수업예약 없이\n 편하게 수업참여가 가능해요.`;
-
   return (
     <Container>
       <Wrapper>
         <Contents>
           <TextContainer>
-            <Title title={title} />
-            <Text>{text}</Text>
+            <Title title={ReadingBooksTitle(isTablet)} />
+            <Text text={ReadingBooksText(isTablet)} />
           </TextContainer>
           <ImageContainer>
             <Tablet src="assets/ReadingBooks/tablet.png" />
@@ -65,22 +59,6 @@ const Contents = styled.div`
 `;
 
 const TextContainer = styled.div``;
-
-const Text = styled.p`
-  padding-top: 27px;
-  white-space: pre-wrap;
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 1.75;
-  letter-spacing: normal;
-  text-align: center;
-  color: rgb(51, 51, 51);
-  @media ${({ theme }) => theme.device.tablet} {
-    padding-top: 50px;
-    font-size: 24px;
-    line-height: 1.67;
-  }
-`;
 
 const ImageContainer = styled.div`
   position: relative;
