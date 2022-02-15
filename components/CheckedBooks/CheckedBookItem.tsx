@@ -39,20 +39,12 @@ const CheckedAnimation = styled.img`
     width: 150px;
     height: 100px;
   }
-  @media ${({ theme }) => theme.device.pc} {
-    width: 150px;
-    height: 100px;
-  }
 `;
 const BookImage = styled.img`
   margin-top: 15px;
   width: 87px;
   height: 116px;
   @media ${({ theme }) => theme.device.tablet} {
-    width: 150px;
-    height: 200px;
-  }
-  @media ${({ theme }) => theme.device.pc} {
     width: 150px;
     height: 200px;
   }

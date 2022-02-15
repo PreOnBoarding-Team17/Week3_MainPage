@@ -20,11 +20,11 @@ const Navigation: React.FC = () => {
         <SmallMenu>
           <div>
             <a href="#">
-              <CartIcon src="assets/cart.png" alt="장바구니" />
+              <Icon src="assets/cart.png" alt="장바구니" />
             </a>
           </div>
           <a href="#">
-            <MenuIcon src="assets/hamburger.png" alt="메뉴" />
+            <Icon src="assets/hamburger.png" alt="메뉴" />
           </a>
         </SmallMenu>
       </NavWrap>
@@ -68,10 +68,6 @@ const LogoImage = styled('img')`
   width: 112.2px;
   height: 36px;
   @media ${({ theme }) => theme.device.tablet} {
-    width: 154.5px;
-    height: 50px;
-  }
-  @media ${({ theme }) => theme.device.pc} {
     width: 154.5px;
     height: 50px;
   }
@@ -132,11 +128,7 @@ const SmallMenu = styled('div')`
   }
 `;
 
-const CartIcon = styled('img')`
-  width: 24px;
-  height: 24px;
-`;
-const MenuIcon = styled('img')`
+const Icon = styled('img')`
   width: 24px;
   height: 24px;
 `;

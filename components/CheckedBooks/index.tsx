@@ -54,11 +54,8 @@ const CheckedBooksWrapInner = styled.div`
   }
 
   @media ${({ theme }) => theme.device.pc} {
-    width: 100%;
     flex-direction: row;
     max-width: 1200px;
-    padding-left: 30px;
-    padding-right: 30px;
     margin: 0px auto;
     margin-top: 150px;
     margin-bottom: 150px;
@@ -84,8 +81,6 @@ const Title = styled.h2`
   }
 
   @media ${({ theme }) => theme.device.pc} {
-    font-size: 50px;
-    line-height: 1.4;
     text-align: left;
   }
 `;
@@ -108,11 +103,8 @@ const Description = styled.div`
   }
 
   @media ${({ theme }) => theme.device.pc} {
-    font-size: 24px;
-    line-height: 1.67;
     text-align: left;
   }
 `;
-const Contents = styled.div``;
 
 export default CheckedBooks;
