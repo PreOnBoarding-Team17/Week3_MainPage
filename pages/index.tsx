@@ -8,6 +8,7 @@ import CheckedBooks from 'components/CheckedBooks';
 import ReadingBooks from 'components/ReadingBooks';
 import ReadingDiary from 'components/ReadingDiary';
 import BestSeller from 'components/BestSeller';
+import Feature from 'components/Feature';
 import Footer from 'components/common/Footer';
 import useMedia from 'utils/hooks/useMedia';
 
@@ -25,6 +26,7 @@ const Home: NextPage = () => {
       <ReadingBooks isTablet={isTablet} />
       <ReadingDiary isPc={isPc} isTablet={isTablet} />
       <BestSeller isTablet={isTablet} />
+      <Feature />
       <Footer />
       <DownloadButton />
     </div>
