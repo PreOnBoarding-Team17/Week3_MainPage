@@ -1,24 +1,19 @@
 import styled from 'styled-components';
 import BookList from 'components/BestSeller/BookList';
+import Title from 'components/common/Title';
+import Text from 'components/common/Text';
+import { BestSellerTitle, BestSellerText } from 'utils/constants';
 
 interface BestSellerProps {
   isTablet: boolean;
 }
 
 const BestSeller = ({ isTablet }: BestSellerProps) => {
-  const title = isTablet
-    ? `입학 전 1000권 읽기!\n땅콩스쿨로 도전해보세요.`
-    : `입학 전 1000권 읽기!\n땅콩스쿨로\n도전해보세요.`;
-
-  const text = isTablet
-    ? `매달 새로운 32권의 어린이 베스트 셀러를 만날 수 있어요.\n독서를 통해 배움의 즐거움을 알아가 보세요.`
-    : `매달 새로운 32권의\n어린이 베스트 셀러를 만날 수 있어요.\n독서를 통해 배움의 즐거움을 알아가 보세요.`;
-
   return (
     <Container>
       <TextContainer>
-        <Title>{title}</Title>
-        <Text>{text}</Text>
+        <Title title={BestSellerTitle(isTablet)} />
+        <Text text={BestSellerText(isTablet)} />
       </TextContainer>
       <ImageContainer>
         <ImageWrapper>
@@ -43,35 +38,6 @@ const TextContainer = styled.div`
   margin-top: 100px;
   @media ${({ theme }) => theme.device.tablet} {
     margin-top: 150px;
-  }
-`;
-
-const Title = styled.h2`
-  white-space: pre-wrap;
-  font-size: 30px;
-  font-weight: bold;
-  line-height: 1.47;
-  letter-spacing: normal;
-  text-align: center;
-  color: rgb(51, 51, 51);
-  @media ${({ theme }) => theme.device.tablet} {
-    font-size: 50px;
-    line-height: 1.44;
-  }
-`;
-
-const Text = styled.p`
-  padding-top: 30px;
-  white-space: pre-wrap;
-  font-size: 16px;
-  line-height: 1.75;
-  letter-spacing: normal;
-  text-align: center;
-  color: rgb(51, 51, 51);
-  @media ${({ theme }) => theme.device.tablet} {
-    padding-top: 50px;
-    font-size: 24px;
-    line-height: 1.67;
   }
 `;
 

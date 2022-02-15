@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Card from 'components/Feature/Card';
+import Title from 'components/common/Title';
 
 interface FeatureProps {
   isPc: boolean;
@@ -10,7 +11,7 @@ const Feature = ({ isPc, isTablet }: FeatureProps) => {
   return (
     <Container>
       <Wrapper>
-        <Title>땅콩스쿨만의 특징</Title>
+        <Title title="땅콩스쿨만의 특징" />
         <ImageContainer>
           <Card isPc={isPc} isTablet={isTablet} />
         </ImageContainer>
@@ -20,9 +21,7 @@ const Feature = ({ isPc, isTablet }: FeatureProps) => {
 };
 
 const Container = styled.section`
-  overflow-y: hidden;
   background-color: rgb(249, 249, 249);
-  overflow-x: hidden;
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -47,18 +46,6 @@ const Wrapper = styled.div`
   }
 `;
 
-const Title = styled.h2`
-  white-space: pre-wrap;
-  font-size: 30px;
-  font-weight: bold;
-  letter-spacing: normal;
-  text-align: center;
-  color: rgb(51, 51, 51);
-  @media ${({ theme }) => theme.device.tablet} {
-    font-size: 50px;
-  }
-`;
-
 const ImageContainer = styled.div`
   margin-bottom: 50px;
   overflow-x: hidden;
@@ -66,18 +53,15 @@ const ImageContainer = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  margin-top: 40px;
-  margin-bottom: 50px;
+  margin: 40px 0 50px 0;
   @media ${({ theme }) => theme.device.tablet} {
     width: 100%;
     flex-direction: column;
-    margin-top: 40px;
-    margin-bottom: 101px;
+    margin: 40px 0 101px 0;
   }
   @media ${({ theme }) => theme.device.pc} {
     width: 1380px;
-    margin-top: 80px;
-    margin-bottom: 0px;
+    margin: 80px 0 0 0;
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;

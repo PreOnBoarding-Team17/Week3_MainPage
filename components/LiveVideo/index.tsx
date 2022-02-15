@@ -1,16 +1,11 @@
 import styled from 'styled-components';
+import { LiveVideoTitle, LiveVideoText } from 'utils/constants';
 
 interface LiveVideoProps {
   isPc: boolean;
 }
 
 const LiveVideo = ({ isPc }: LiveVideoProps) => {
-  const title = isPc ? `랜선 라이브\n북클래스` : `랜선 라이브 북클래스`;
-
-  const text = isPc
-    ? `친구들과 함께\n그림 그리기, 퀴즈 풀기,\n선생님과 대화하며 경험해요!`
-    : `친구들과 함께 그림 그리기, 퀴즈 풀기,\n선생님과 대화하며 경험해요!`;
-
   return (
     <Container>
       <Wrapper>
@@ -18,8 +13,8 @@ const LiveVideo = ({ isPc }: LiveVideoProps) => {
           <TextContainer>
             <TextWrapper>
               <TextBox>
-                <Title>{title}</Title>
-                <Text>{text}</Text>
+                <Title>{LiveVideoTitle(isPc)}</Title>
+                <Text>{LiveVideoText(isPc)}</Text>
               </TextBox>
             </TextWrapper>
           </TextContainer>
@@ -97,18 +92,12 @@ const TextContainer = styled.div`
   }
 `;
 
-const TextWrapper = styled.div`
-  @media ${({ theme }) => theme.device.pc} {
-    -webkit-box-pack: center;
-    justify-content: center;
-  }
-`;
+const TextWrapper = styled.div``;
 
 const TextBox = styled.div`
   display: flex;
   white-space: pre-wrap;
   flex-direction: column;
-  color: rgb(51, 51, 51);
   letter-spacing: normal;
   @media ${({ theme }) => theme.device.tablet} {
     width: 442px;
@@ -124,7 +113,6 @@ const Title = styled.div`
   line-height: 2.33;
   letter-spacing: normal;
   text-align: center;
-  color: rgb(51, 51, 51);
   @media ${({ theme }) => theme.device.tablet} {
     font-size: 50px;
     line-height: 1.4;
@@ -137,11 +125,8 @@ const Title = styled.div`
 const Text = styled.div`
   margin-top: 30px;
   font-size: 16px;
-  font-weight: normal;
   line-height: 1.75;
-  letter-spacing: normal;
   text-align: center;
-  color: rgb(51, 51, 51);
   @media ${({ theme }) => theme.device.tablet} {
     margin-top: 50px;
     font-size: 24px;
