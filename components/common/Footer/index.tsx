@@ -141,4 +141,55 @@ const Image = styled.img`
   }
 `;
 
+<<<<<<< HEAD
+=======
+const Footer: React.FC = () => {
+  return (
+    <FooterWrapper>
+      <FooterContainer>
+        <FooterInfo>
+          <FooterInfoTitle>{FOOTERINFOTITLE} </FooterInfoTitle>
+
+          {FOOTERINFOCONTENT.map((text, idx) => {
+            if (idx === 0)
+              return (
+                <FooterInfoContent key={text}>
+                  {text}
+                  <Link href="#">
+                    <a>사업자 정보 조회</a>
+                  </Link>
+                </FooterInfoContent>
+              );
+            return <FooterInfoContent key={text}>{text}</FooterInfoContent>;
+          })}
+
+          <FooterInfoTag>{FOOTERINFOTAG}</FooterInfoTag>
+        </FooterInfo>
+
+        <FooterMenu>
+          {FOOTERMENULIST.map((list, idx) => (
+            <FooterMenuList key={idx}>
+              {list.map((text, index) => {
+                return (
+                  <span key={text + index}>
+                    <Link href="#">
+                      <a>{text}</a>
+                    </Link>
+                  </span>
+                );
+              })}
+            </FooterMenuList>
+          ))}
+
+          <div>
+            <Image src={IMAGESRC[0]} alt="insta" />
+            <Image src={IMAGESRC[1]} alt="blog" />
+          </div>
+        </FooterMenu>
+      </FooterContainer>
+    </FooterWrapper>
+  );
+};
+
+>>>>>>> 3552b7c949f3073e9a51b19bdd421cf76ce47892
 export default Footer;
