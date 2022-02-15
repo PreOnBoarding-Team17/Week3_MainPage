@@ -19,13 +19,9 @@ const DownloadContainer = styled.div`
   jsutify-content: center;
   align-items: center;
   margin: 0 auto;
-
-  @media ${({ theme }) => theme.device.pc} {
-    hieght: 534px;
-  }
 `;
 
-const DONWLOADTITLE = '지금 다운로드 받으세요!';
+const DONWLOAD_TITLE = '지금 다운로드 받으세요!';
 const DownloadTitle = styled.div`
   font-size: 30px;
   font-weight: bold;
@@ -41,7 +37,6 @@ const DownloadContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  jsutify-content: center;
 `;
 
 const DownloadContentBg = styled.div`
@@ -132,7 +127,7 @@ const DownloadContentRightText = styled(DownloadContentText)`
   padding: 5px 10px;
 `;
 
-const DOWNLOADBTNTEXT = '앱 다운로드 하기';
+const DOWNLOAD_BTN_TEXT = '앱 다운로드 하기';
 const DownloadBtn = styled.button`
   margin: 30px 0;
   padding: 0 85px;
@@ -164,7 +159,7 @@ interface DownloadProps {
 }
 
 const Download: React.FC<DownloadProps> = ({ isPc }) => {
-  const DOWNLOADCONTENTTEXT = [
+  const DOWNLOAD_CONTENT_TEXT = [
     {
       text: '책을 보는\n새로운 방법',
       fontSize: '36px',
@@ -186,13 +181,13 @@ const Download: React.FC<DownloadProps> = ({ isPc }) => {
   return (
     <DownloadWrapper>
       <DownloadContainer>
-        <DownloadTitle>{DONWLOADTITLE}</DownloadTitle>
+        <DownloadTitle>{DONWLOAD_TITLE}</DownloadTitle>
 
         <DownloadContent>
           <DownloadContentBg>
             <DownloadContentLeft>
               <Image src="assets/download/logo-white.png" alt="coupon" />
-              {DOWNLOADCONTENTTEXT.map((text, index) => {
+              {DOWNLOAD_CONTENT_TEXT.map((text, index) => {
                 if (index !== 2)
                   return (
                     <DownloadContentText
@@ -208,17 +203,17 @@ const Download: React.FC<DownloadProps> = ({ isPc }) => {
 
             <DownloadContentRight>
               <DownloadContentRightText
-                fontSize={DOWNLOADCONTENTTEXT[2].fontSize}
-                lineHeight={DOWNLOADCONTENTTEXT[2].lineHeight}
+                fontSize={DOWNLOAD_CONTENT_TEXT[2].fontSize}
+                lineHeight={DOWNLOAD_CONTENT_TEXT[2].lineHeight}
               >
-                {DOWNLOADCONTENTTEXT[2].text}
+                {DOWNLOAD_CONTENT_TEXT[2].text}
               </DownloadContentRightText>
               <DownloadBtn>
                 <DownloadBtnImage
                   src="assets/download/download-btn.png"
                   alt="download"
                 />
-                {DOWNLOADBTNTEXT}
+                {DOWNLOAD_BTN_TEXT}
               </DownloadBtn>
             </DownloadContentRight>
           </DownloadContentBg>
