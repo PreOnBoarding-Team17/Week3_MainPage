@@ -2,9 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const AboutContainer = styled.div`
+  box-sizing: border-box;
   background-color: #ffb100;
-  width: 100%;
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;

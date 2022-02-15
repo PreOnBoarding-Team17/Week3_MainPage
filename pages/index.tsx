@@ -19,7 +19,7 @@ const Home: NextPage = () => {
       <About isPc={isPc} />
       <LiveVideo isPc={isPc} />
       <ReadingBooks isTablet={isTablet} />
-      <Footer isTablet={isTablet} isPc={isPc} />
+      <Footer />
       <DownloadButton />
     </div>
   );
