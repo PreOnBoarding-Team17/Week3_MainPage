@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const LiveVideo = () => {
   const text = `친구들과 함께
@@ -44,7 +44,7 @@ const Wrapper = styled.div`
   height: 628px;
   width: 100%;
   overflow-x: hidden;
-  background-image: url("/assets/CheckedBooks/Background.png");
+  background-image: url('/assets/CheckedBooks/Background.png');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;

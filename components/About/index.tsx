@@ -1,6 +1,4 @@
 import React from 'react'
-import { useMediaQuery } from 'react-responsive'
-import Image from 'next/image'
 import styled from 'styled-components'
 
 const AboutContainer = styled.div`
@@ -19,18 +17,13 @@ const AboutContainer = styled.div`
   }
 `
 
-const AboutImage = styled.div`
-  // background-image: url('/assets/second-logo');
-  // background-size: cover;
-  // background-repeat: no-repeat;
+const Image = styled.img`
   width: 67px;
   height: 50px;
 
   @media ${({ theme }) => theme.device.tablet} {
-    img {
-      width: 134px;
-      height: 100px;
-    }
+    width: 134px;
+    height: 100px;
   }
 `
 
@@ -60,23 +53,19 @@ const ABOUTCONTENTTEXT = [
   '실시간(LIVE)으로, 아이들이 좋아하는\n 캐릭터 선생님을 통해,\n 친구들과 함께 창의독서, 퀴즈 등을\n 재미있게 즐길 수 있 는 온라인 서비스입니다.',
 ]
 
-const About: React.FC = () => {
-  const isPC = useMediaQuery({ query: '(min-width: 1200px)' })
+interface AboutProps {
+  isPc: boolean
+}
+
+const About: React.FC<AboutProps> = ({ isPc }) => {
   return (
     <AboutContainer>
-      <AboutImage>
-        <Image
-          src="/assets/second-logo.gif"
-          alt="logo"
-          width="67px"
-          height="50px"
-        />
-      </AboutImage>
+      <Image src="/assets/second-logo.gif" alt="logo" />
 
       <AboutTitle>땅콩스쿨이란?</AboutTitle>
 
       <AboutContent>
-        {isPC ? ABOUTCONTENTTEXT[0] : ABOUTCONTENTTEXT[1]}
+        {isPc ? ABOUTCONTENTTEXT[0] : ABOUTCONTENTTEXT[1]}
       </AboutContent>
     </AboutContainer>
   )

@@ -1,5 +1,5 @@
-import React from 'react'
-import styled, { keyframes } from 'styled-components'
+import React from 'react';
+import styled, { keyframes } from 'styled-components';
 
 const MainContainer = styled.div`
   width: 100%;
@@ -21,7 +21,7 @@ const MainContainer = styled.div`
     background-position: 75% center;
     background-image: url('assets/main/main-bg.jpg');
 
-`
+`;
 const MainContent = styled.div`
   display: flex;
   flex-direction: column;
@@ -46,20 +46,20 @@ const MainContent = styled.div`
     margin-top: 230px;
     max-width: 1140px;
   }
-`
+`;
 
 const MAINCONTENTTEXT = [
   ['책 읽는 재미,'],
   ['땅콩스쿨이', '#fec442'],
   ['만들어줄게요!'],
-]
+];
 
 const MainContentText = styled.span`
   color: ${({ color }) => (color ? color : '#fff')};
   span {
     color: #fff;
   }
-`
+`;
 
 const mouseMove = keyframes`
     from {
@@ -69,7 +69,7 @@ const mouseMove = keyframes`
     to {
       transform: translateY(0%);
     }
-`
+`;
 
 const MainImage = styled.div`
   width: 56px;
@@ -85,7 +85,7 @@ const MainImage = styled.div`
     height: 72px;
     width: 72px;
   }
-`
+`;
 
 const Main: React.FC = () => {
   return (
@@ -107,7 +107,7 @@ const Main: React.FC = () => {
 
       <MainImage></MainImage>
     </MainContainer>
-  )
-}
+  );
+};
 
-export default Main
+export default Main;
