@@ -8,9 +8,13 @@ interface AboutProps {
 const About = ({ isPc }: AboutProps) => {
   return (
     <Container>
-      <Image src="/assets/second-logo.gif" alt="logo" />
-      <Title>땅콩스쿨이란?</Title>
-      <Text>{AboutText(isPc)}</Text>
+      <Image
+        src="/assets/About/second-logo.gif"
+        alt="logo"
+        className="fade-up"
+      />
+      <Title className="fade-up">땅콩스쿨이란?</Title>
+      <Text className="fade-up">{AboutText(isPc)}</Text>
     </Container>
   );
 };

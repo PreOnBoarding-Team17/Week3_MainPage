@@ -1,10 +1,62 @@
-import GlobalStyles from "styles/GlobalStyles";
-import Head from "next/head";
-import type { AppProps } from "next/app";
-import { ThemeProvider } from "styled-components";
-import { device } from "styles/Mixin";
+import { useEffect } from 'react';
+import GlobalStyles from 'styles/GlobalStyles';
+import Head from 'next/head';
+import type { AppProps } from 'next/app';
+import { ThemeProvider } from 'styled-components';
+import { device } from 'styles/Mixin';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+
+const AOSCONFIG: AOS.AosOptions = {
+  delay: 250,
+  duration: 500,
+  once: false,
+  mirror: true,
+  easing: 'ease-in-out',
+};
+
+const gsapFunc = (y: number, elem: any) => {
+  elem.style.transform = `translate(0px, ${y}px)`;
+  elem.style.opacity = '0';
+  gsap.fromTo(
+    elem,
+    { y: y, autoAlpha: 0 },
+    {
+      y: 0,
+      duration: 1.5,
+      autoAlpha: 1,
+      ease: 'ease-in-out',
+      overwrite: 'auto',
+    }
+  );
+};
 
 function MyApp({ Component, pageProps }: AppProps) {
+  useEffect(() => {
+    AOS.init(AOSCONFIG);
+    gsap.registerPlugin(ScrollTrigger);
+
+    const fadeUp = gsap.utils.toArray('.fade-up');
+    fadeUp.forEach((elem: any) => {
+      ScrollTrigger.create({
+        trigger: elem,
+        onEnter: () => {
+          gsapFunc(100, elem);
+        },
+        scrub: true,
+        onEnterBack: () => {
+          gsapFunc(-100, elem);
+        },
+        onLeave: (elem) => {
+          gsap.set(elem, { autoAlpha: 0 });
+        },
+      });
+    });
+  }, []);
+
   return (
     <>
       <Head>

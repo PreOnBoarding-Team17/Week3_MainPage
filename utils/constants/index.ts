@@ -137,6 +137,27 @@ const MAIN_CONTENT_TEXT = [
   ['만들어줄게요!'],
 ];
 
+const DONWLOAD_TITLE = '지금 다운로드 받으세요!';
+const DOWNLOAD_BTN_TEXT = '앱 다운로드 하기';
+const DOWNLOAD_CONTENT_TEXT_FUNC = (isPc: boolean) => [
+  {
+    text: '책을 보는\n새로운 방법',
+    fontSize: '36px',
+  },
+  {
+    text: isPc
+      ? '지금 가입하시면 매주 8권의 동화책을 보실 수 있어요!'
+      : '지금 가입하시면\n매주 8권의 동화책을 보실 수 있어요!',
+    fontSize: '13px',
+    lineHeight: '1.8',
+  },
+  {
+    text: '회원가입에 걸리는 시간 단 3초',
+    fontSize: '13px',
+    lineHeight: '1.8',
+  },
+];
+
 const FOOTER_INFO_TITLE = '(주)호두랩스';
 
 const FOOTER_INFO_CONTENT = [
@@ -154,8 +175,8 @@ const FOOTER_MENU_LIST = [
 ];
 
 const FOOTER_IMAGE_SRC = [
-  '/assets/footer/instagram.png',
-  '/assets/footer/blog.png',
+  '/assets/Footer/instagram.png',
+  '/assets/Footer/blog.png',
 ];
 
 export {
@@ -175,6 +196,9 @@ export {
   CheckedBooksText,
   CheckedBookContents,
   MAIN_CONTENT_TEXT,
+  DONWLOAD_TITLE,
+  DOWNLOAD_BTN_TEXT,
+  DOWNLOAD_CONTENT_TEXT_FUNC,
   FOOTER_INFO_CONTENT,
   FOOTER_INFO_TITLE,
   FOOTER_INFO_TAG,
