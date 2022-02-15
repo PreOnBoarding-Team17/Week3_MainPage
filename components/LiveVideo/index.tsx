@@ -1,9 +1,15 @@
 import styled from 'styled-components';
 
-const LiveVideo = () => {
-  const text = `친구들과 함께
-그림 그리기, 퀴즈 풀기,
-선생님과 대화하며 경험해요!`;
+interface LiveVideoProps {
+  isPc: boolean;
+}
+
+const LiveVideo = ({ isPc }: LiveVideoProps) => {
+  const title = isPc ? `랜선 라이브\n북클래스` : `랜선 라이브 북클래스`;
+
+  const text = isPc
+    ? `친구들과 함께\n그림 그리기, 퀴즈 풀기,\n선생님과 대화하며 경험해요!`
+    : `친구들과 함께 그림 그리기, 퀴즈 풀기,\n선생님과 대화하며 경험해요!`;
 
   return (
     <Container>
@@ -12,16 +18,16 @@ const LiveVideo = () => {
           <TextContainer>
             <TextWrapper>
               <TextBox>
-                <Title>랜선 라이브 북클래스</Title>
+                <Title>{title}</Title>
                 <Text>{text}</Text>
               </TextBox>
             </TextWrapper>
           </TextContainer>
           <VideoContainer>
-            <Image src="assets/monitor.png" alt="모니터 이미지" />
+            <Image src="assets/LiveVideo/monitor.png" alt="모니터 이미지" />
             <VideoWrapper>
               <Video autoPlay muted loop playsInline>
-                <source src="assets/CheckedBooks/Video.mp4" type="video/mp4" />
+                <source src="assets/LiveVideo/Video.mp4" type="video/mp4" />
               </Video>
             </VideoWrapper>
           </VideoContainer>
@@ -44,7 +50,7 @@ const Wrapper = styled.div`
   height: 628px;
   width: 100%;
   overflow-x: hidden;
-  background-image: url('/assets/CheckedBooks/Background.png');
+  background-image: url('/assets/LiveVideo/Background.png');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -100,7 +106,7 @@ const TextWrapper = styled.div`
 
 const TextBox = styled.div`
   display: flex;
-  width: 265.2px;
+  white-space: pre-wrap;
   flex-direction: column;
   color: rgb(51, 51, 51);
   letter-spacing: normal;
@@ -130,7 +136,6 @@ const Title = styled.div`
 
 const Text = styled.div`
   margin-top: 30px;
-  word-break: keep-all;
   font-size: 16px;
   font-weight: normal;
   line-height: 1.75;
@@ -138,13 +143,11 @@ const Text = styled.div`
   text-align: center;
   color: rgb(51, 51, 51);
   @media ${({ theme }) => theme.device.tablet} {
-    white-space: normal;
     margin-top: 50px;
     font-size: 24px;
     line-height: 1.67;
   }
   @media ${({ theme }) => theme.device.pc} {
-    white-space: pre-wrap;
     text-align: left;
   }
 `;
