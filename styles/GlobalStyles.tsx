@@ -5,6 +5,10 @@ const GlobalStyles = createGlobalStyle`
 	${reset};
 	html {
 		font-family: 'Noto Sans KR', sans-serif;
+		overflow-x: hidden;
+	}
+	div, span {
+		box-sizing: border-box;
 	}
 	`;
 
