@@ -1,3 +1,8 @@
+const NAVIMAGESRC = [
+  'assets/Navigation/logo-black.png',
+  'assets/Navigation/logo-white.png',
+];
+
 const ReadingBooksTitle = (isTablet: boolean) => {
   if (isTablet) {
     return `실시간 방송 형태로 제공되는\n 신개념 책 읽기`;
@@ -180,6 +185,7 @@ const FOOTER_IMAGE_SRC = [
 ];
 
 export {
+  NAVIMAGESRC,
   ReadingBooksTitle,
   ReadingBooksText,
   ReadingDiaryTitle,

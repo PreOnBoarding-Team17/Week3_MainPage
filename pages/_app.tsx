@@ -21,13 +21,17 @@ const AOSCONFIG: AOS.AosOptions = {
 const gsapFunc = (y: number, elem: any) => {
   elem.style.transform = `translate(0px, ${y}px)`;
   elem.style.opacity = '0';
+  if (elem.src) {
+    elem.src = elem.src.substring(0, elem.src.length - 3) + 'gif';
+  }
   gsap.fromTo(
     elem,
-    { y: y, opacity: 0 },
+    { y: y, opacity: 0, autoAlpha: 0 },
     {
       y: 0,
       duration: 1.5,
       opacity: 1,
+      autoAlpha: 1,
       ease: 'ease-in-out',
       overwrite: 'auto',
     }
@@ -50,9 +54,26 @@ function MyApp({ Component, pageProps }: AppProps) {
         onEnterBack: () => {
           gsapFunc(-100, elem);
         },
-        onLeave: (elem) => {
-          gsap.set(elem, { autoAlpha: 0 });
+        // onLeave: (elem) => {
+        //   gsap.set(elem, { opacity: 0 });
+        // },
+      });
+    });
+
+    const gif = gsap.utils.toArray('.gif');
+    gif.forEach((elem: any) => {
+      ScrollTrigger.create({
+        trigger: elem,
+        onEnter: (elem) => {
+          console.log(elem);
+          gsap.fromTo(elem, { autoAlpha: 0 }, { duration: 1, autoAlpha: 1 });
         },
+        onEnterBack: () => {
+          gsap.fromTo(elem, { autoAlpha: 0 }, { duration: 1, autoAlpha: 1 });
+        },
+        // onLeave: (elem) => {
+        //   gsap.set(elem, { autoAlpha: 0 });
+        // },
       });
     });
   }, []);
