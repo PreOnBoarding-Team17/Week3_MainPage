@@ -137,6 +137,27 @@ const MAIN_CONTENT_TEXT = [
   ['만들어줄게요!'],
 ];
 
+const FOOTER_INFO_TITLE = '(주)호두랩스';
+
+const FOOTER_INFO_CONTENT = [
+  '대표 : 김민우 | 사업자등록번호 : 431-88-01287 ',
+  '서울특별시 강남구 언주로 637, 12층 (논현동, 싸이칸홀딩스타워)',
+  '제주특별시 서귀포시 중정로 86, 304',
+  '통신판매업 신고번호 : 2019-서울강남-00301호',
+];
+
+const FOOTER_INFO_TAG = '© Hodoo Labs. ALL RIGHTS RESERVED';
+
+const FOOTER_MENU_LIST = [
+  ['고객센터', '채팅상담'],
+  ['이용약관', '개인정보 처리방침', '환불정책'],
+];
+
+const FOOTER_IMAGE_SRC = [
+  '/assets/footer/instagram.png',
+  '/assets/footer/blog.png',
+];
+
 export {
   ReadingBooksTitle,
   ReadingBooksText,
@@ -154,4 +175,9 @@ export {
   CheckedBooksText,
   CheckedBookContents,
   MAIN_CONTENT_TEXT,
+  FOOTER_INFO_CONTENT,
+  FOOTER_INFO_TITLE,
+  FOOTER_INFO_TAG,
+  FOOTER_MENU_LIST,
+  FOOTER_IMAGE_SRC,
 };
