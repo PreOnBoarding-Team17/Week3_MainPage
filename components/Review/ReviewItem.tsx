@@ -22,10 +22,18 @@ const ReviewItemContainer = styled.div`
   box-sizing: border-box;
   border-radius: 24px;
   width: 320px;
+
+  @media ${({ theme }) => theme.device.tablet} {
+    width: 720px;
+  }
+
+  @media ${({ theme }) => theme.device.pc} {
+    width: 820px;
+  }
 `;
 const ReviewUserId = styled.div`
-  // text-align: start;
-  text-align: center;
+  text-align: start;
+  // text-align: center;
   opacity: 0.8;
   font-size: 12px;
   font-weight: normal;
@@ -34,6 +42,11 @@ const ReviewUserId = styled.div`
   line-height: 3.33;
   letter-spacing: normal;
   color: rgb(255, 255, 255);
+
+  @media ${({ theme }) => theme.device.tablet} {
+    font-size: 16px;
+    line-height: 2.5;
+  }
 `;
 const ReviewContent = styled.div`
   white-space: pre-wrap;
@@ -46,6 +59,11 @@ const ReviewContent = styled.div`
   text-align: center;
   color: rgb(255, 255, 255);
   margin-top: 30px;
+
+  @media ${({ theme }) => theme.device.tablet} {
+    font-size: 20px;
+    line-height: 1.8;
+  }
 `;
 
 export default ReviewItem;

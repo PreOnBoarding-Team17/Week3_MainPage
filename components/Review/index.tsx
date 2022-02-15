@@ -8,7 +8,12 @@ const Review: React.FC<UseMediaInterface> = ({ isTablet, isPc }) => {
   return (
     <ReviewContainer>
       <ReviewWrapper>
-        <BookSwiper index={index} setIndex={setIndex} />
+        <BookSwiper
+          index={index}
+          setIndex={setIndex}
+          isPc={isPc}
+          isTablet={isTablet}
+        />
         <SwiperProgressBar index={index} />
         <Background></Background>
       </ReviewWrapper>
