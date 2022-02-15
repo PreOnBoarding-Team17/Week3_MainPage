@@ -171,6 +171,7 @@ const ContentRightText = styled(ContentText)`
 `;
 
 const Button = styled.button`
+  cursor: pointer;
   margin: 30px 0;
   padding: 0 85px;
   height: 50px;

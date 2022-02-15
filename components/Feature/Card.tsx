@@ -23,7 +23,11 @@ const Card = ({ isPc, isTablet }: CardProps) => {
   return (
     <>
       {cardList.map((element) => (
-        <Container key={element}>
+        <Container
+          key={element}
+          data-aos="fade-up"
+          data-aos-delay={`${element * 500}`}
+        >
           <Icon
             src={`assets/Feature/Icon_${element}.png`}
             alt={`이미지 ${element}`}
