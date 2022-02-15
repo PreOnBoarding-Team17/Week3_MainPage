@@ -22,9 +22,10 @@ const Container = styled.div`
   display: flex;
   flex: 1 1 0%;
   flex-direction: row;
+  justify-content: center;
   margin: 64px 0 0 0;
   @media ${({ theme }) => theme.device.tablet} {
-    margin: 100px 0 0 197px;
+    margin: 100px 0 0 0;
   }
   @media ${({ theme }) => theme.device.pc} {
     margin: 0 0 0 197px;
