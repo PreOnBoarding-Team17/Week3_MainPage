@@ -27,6 +27,7 @@ const MainContent = styled.div`
   flex-direction: column;
   jsutify-content: center;
   margin: 0 auto;
+  position: relative;
 
   line-height: 1.33;
   font-size: 36px;
@@ -53,11 +54,38 @@ const MAINCONTENTTEXT = [
   ['땅콩스쿨이', '#fec442'],
   ['만들어줄게요!'],
 ];
-
 const MainContentText = styled.span`
-  color: ${({ color }) => (color ? color : '#fff')};
+  color: #fff;
+  line-height: 1.4;
   span {
-    color: #fff;
+    border-bottom: 4px solid #ffb100;
+    border-radius: 4px;
+  }
+
+  @media ${({ theme }) => theme.device.tablet} {
+    span {
+      border-bottom: 11px solid #ffb100;
+    }
+  }
+`;
+
+const Image = styled.img`
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  width: 36px;
+  height: 36px;
+
+  @media ${({ theme }) => theme.device.tablet} {
+    width: 51px;
+    height: 51px;
+    top: 70px;
+    left: 10px;
+  }
+
+  @media ${({ theme }) => theme.device.pc} {
+    top: 70px;
+    left: -20px;
   }
 `;
 
@@ -95,14 +123,15 @@ const Main: React.FC = () => {
           <MainContentText key={data[0]} color={data[1]}>
             {data[1] ? (
               <div>
-                {data[0].substring(0, data[0].length - 1)}
-                <span>{data[0][data[0].length - 1]}</span>
+                <span>{data[0].substring(0, data[0].length - 1)}</span>
+                {data[0][data[0].length - 1]}
               </div>
             ) : (
               data[0]
             )}
           </MainContentText>
         ))}
+        <Image src="assets/main/star.png" alt="star" />
       </MainContent>
 
       <MainImage></MainImage>
