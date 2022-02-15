@@ -11,6 +11,7 @@ const CheckedBookImage = () => {
             key={index}
             checked={item.checked}
             book={item.book}
+            index={index}
           />
         );
       })}

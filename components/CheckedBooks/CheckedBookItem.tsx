@@ -3,12 +3,18 @@ import styled from 'styled-components';
 interface CheckedBookItemProps {
   checked: string;
   book: string;
+  index: number;
 }
 
-const CheckedBookItem = ({ checked, book }: CheckedBookItemProps) => {
+const CheckedBookItem = ({ checked, book, index }: CheckedBookItemProps) => {
   return (
     <Container>
-      <CheckedAnimation src={checked} alt="checked" />
+      <CheckedAnimation
+        src={checked}
+        alt="checked"
+        className="gif"
+        data-index={index}
+      />
       <Image src={book} alt="book" />
     </Container>
   );
