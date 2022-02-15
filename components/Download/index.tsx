@@ -16,7 +16,7 @@ const DownloadWrapper = styled.div`
 const DownloadContainer = styled.div`
   display: flex;
   flex-direction: column;
-  jsutify-content: center;
+  justify-contents: center;
   align-items: center;
   margin: 0 auto;
 `;
@@ -49,7 +49,6 @@ const DownloadContentBg = styled.div`
   height: 614px;
   display: flex;
   flex-direction: column;
-  jsutify-content: space-between;
   align-items: center;
 
   @media ${({ theme }) => theme.device.tablet} {
@@ -71,7 +70,6 @@ const DownloadContentLeft = styled.div`
   padding-top: 95px;
   display: flex;
   flex-direction: column;
-  jsutify-content: center;
   align-items: center;
 
   @media ${({ theme }) => theme.device.tablet} {
@@ -110,10 +108,10 @@ const DownloadContentText = styled.div<DownloadContentTextInterface>`
 const DownloadContentRight = styled(DownloadContentLeft)`
   padding-top: 60px;
   @media ${({ theme }) => theme.device.tablet} {
-    margin: 0 0 100px 20px;
+    margin: 0 0 30px 20px;
   }
   @media ${({ theme }) => theme.device.pc} {
-    margin: 0 0 100px 150px;
+    margin: 0 0 20px 150px;
   }
 `;
 
@@ -138,13 +136,12 @@ const DownloadBtn = styled.button`
   outline: none;
   display: flex;
   align-items: center;
-  jsutify-content: center;
 
   @media ${({ theme }) => theme.device.tablet} {
     font-size: 20px;
-    padding: 30px 30px;
-    margin-top: 20px;
-    border-radius: 50px;
+    padding: 35px 30px;
+    margin-top: 30px;
+    border-radius: 10px;
   }
 `;
 const DownloadBtnImage = styled.img`
