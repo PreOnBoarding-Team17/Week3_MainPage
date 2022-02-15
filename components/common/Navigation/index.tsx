@@ -84,7 +84,6 @@ const LogoImage = styled('img')`
     width: 154.5px;
     height: 50px;
   }
-  // z-index: 10;
 `;
 
 const FullMenu = styled('div')<{ toggle: boolean }>`

@@ -5,7 +5,7 @@ interface TitleProps {
 }
 
 const Title = ({ title }: TitleProps) => {
-  return <Container>{title}</Container>;
+  return <Container className="fade-up">{title}</Container>;
 };
 
 const Container = styled.h2`

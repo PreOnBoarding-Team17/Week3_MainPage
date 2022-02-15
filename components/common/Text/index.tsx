@@ -5,7 +5,7 @@ interface TextProps {
 }
 
 const Text = ({ text }: TextProps) => {
-  return <Container>{text}</Container>;
+  return <Container className="fade-up">{text}</Container>;
 };
 
 const Container = styled.p`
