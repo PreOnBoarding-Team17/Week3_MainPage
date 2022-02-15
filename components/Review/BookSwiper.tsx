@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import styled from 'styled-components';
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
-import { Autoplay } from 'swiper';
+import { Autoplay, Controller, Navigation, SwiperOptions } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -85,21 +85,52 @@ const reviews = [
   },
 ];
 
-const BookSwiper: React.FC = () => {
-  const swiper = useSwiper(); // onClick => swiper.slideNext()
+interface BookSwiperProps {
+  index: number;
+  setIndex: (index: number) => void;
+}
+
+const BookSwiper: React.FC<BookSwiperProps> = ({ index, setIndex }) => {
+  // const [index, setIndex] = useState(0);
+
+  const prevRef = useRef<HTMLButtonElement>(null);
+  const nextRef = useRef<HTMLButtonElement>(null);
+
+  const onChangeIndex = (Swiper: any) => {
+    if (Swiper.activeIndex === 6) setIndex(1);
+    else if (Swiper.activeIndex === 0) setIndex(5);
+    else setIndex(Swiper.activeIndex);
+  };
 
   return (
     <SwiperWrap>
-      <SwiperPrevBtn>
+      <SwiperImage>
+        <UnderImageWrap index={index}>
+          <UnderImageInner>
+            <UnderImage
+              src="assets/yellow-logo-low-opacity.png"
+              alt="yellow-logo"
+            />
+          </UnderImageInner>
+        </UnderImageWrap>
+        <KidsImageWrap>
+          <KidsImage src={`assets/kids-circle/kids${index}.png`} />
+        </KidsImageWrap>
+      </SwiperImage>
+
+      <SwiperPrevBtn className="swiper-prev-btn" ref={prevRef}>
         <Icon src="assets/prev.png" alt="prev" />
       </SwiperPrevBtn>
 
       <Swiper
+        onActiveIndexChange={onChangeIndex}
+        slidesPerView={1}
         centeredSlides={true}
         autoplay={{ delay: 3000, disableOnInteraction: false }}
         loop={true}
-        modules={[Autoplay]}
+        modules={[Autoplay, Navigation]}
         className="review-swiper"
+        navigation={{ nextEl: nextRef.current, prevEl: prevRef.current }}
       >
         {reviews.map((review, index) => {
           return (
@@ -109,7 +140,7 @@ const BookSwiper: React.FC = () => {
           );
         })}
       </Swiper>
-      <SwiperNextBtn>
+      <SwiperNextBtn className="swiper-next-btn" ref={nextRef}>
         <Icon src="assets/next.png" alt="next" />
       </SwiperNextBtn>
     </SwiperWrap>
@@ -119,6 +150,56 @@ const BookSwiper: React.FC = () => {
 const SwiperWrap = styled.div`
   position: relative;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  padding: 0 20px;
+  width: 100%;
+`;
+
+const SwiperImage = styled.div`
+  position: absolute;
+  top: 100px;
+  width: 73px;
+  height: 73px;
+  border-radius: 50%;
+  padding: 7.2px;
+  background-color: rgb(255, 177, 0);
+`;
+
+const UnderImageInner = styled.div`
+  width: 68px;
+  height: 68px;
+`;
+const UnderImageWrap = styled.div<{ index: number }>`
+  transition: all 1s ease 0s;
+  position: absolute;
+  padding: 8px;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+  transform: ${(props) => `rotate(${(props.index - 1) * 45}deg)`};
+  transform-origin: right center;
+  margin: -16px 0px 0px -84px;
+`;
+const UnderImage = styled.img`
+  width: 112px;
+  height: 72px;
+  z-index: 0;
+`;
+
+const KidsImageWrap = styled.div`
+  z-index: 4;
+`;
+const KidsImage = styled.img`
+  width: 100%;
+  height: 100%;
 `;
 
 const SwiperPrevBtn = styled.button`
