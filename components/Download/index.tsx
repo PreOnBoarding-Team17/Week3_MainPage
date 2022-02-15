@@ -1,5 +1,9 @@
 import styled from 'styled-components';
-
+import {
+  DONWLOAD_TITLE,
+  DOWNLOAD_BTN_TEXT,
+  DOWNLOAD_CONTENT_TEXT_FUNC,
+} from 'utils/constants';
 interface DownloadContentTextInterface {
   fontSize: string;
   lineHeight?: string;
@@ -10,36 +14,16 @@ interface DownloadProps {
 }
 
 const Download = ({ isPc }: DownloadProps) => {
-  const DOWNLOAD_CONTENT_TEXT = [
-    {
-      text: '책을 보는\n새로운 방법',
-      fontSize: '36px',
-    },
-    {
-      text: isPc
-        ? '지금 가입하시면 매주 8권의 동화책을 보실 수 있어요!'
-        : '지금 가입하시면\n매주 8권의 동화책을 보실 수 있어요!',
-      fontSize: '13px',
-      lineHeight: '1.8',
-    },
-    {
-      text: '회원가입에 걸리는 시간 단 3초',
-      fontSize: '13px',
-      lineHeight: '1.8',
-    },
-  ];
-
-  const DONWLOAD_TITLE = '지금 다운로드 받으세요!';
-  const DOWNLOAD_BTN_TEXT = '앱 다운로드 하기';
+  const DOWNLOAD_CONTENT_TEXT = DOWNLOAD_CONTENT_TEXT_FUNC(isPc);
 
   return (
     <Container>
       <Wrapper>
-        <Title>{DONWLOAD_TITLE}</Title>
+        <Title className="fade-up">{DONWLOAD_TITLE}</Title>
         <ContentsContainer>
           <ContentsWrapper>
             <ContentLeft>
-              <Image src="assets/download/logo-white.png" alt="coupon" />
+              <Image src="assets/Download/logo-white.png" alt="coupon" />
               {DOWNLOAD_CONTENT_TEXT.map((text, index) => {
                 if (index !== 2)
                   return (
@@ -62,7 +46,7 @@ const Download = ({ isPc }: DownloadProps) => {
               </ContentRightText>
               <Button>
                 <ButtonImage
-                  src="assets/download/download-btn.png"
+                  src="assets/Download/download-btn.png"
                   alt="download"
                 />
                 {DOWNLOAD_BTN_TEXT}
@@ -110,7 +94,7 @@ const ContentsContainer = styled.div`
 `;
 
 const ContentsWrapper = styled.div`
-  background-image: url('assets/download/coupon-phone.png');
+  background-image: url('assets/Download/coupon-phone.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -122,12 +106,12 @@ const ContentsWrapper = styled.div`
   align-items: center;
   @media ${({ theme }) => theme.device.tablet} {
     flex-direction: row;
-    background-image: url('assets/download/coupon-tablet.png');
+    background-image: url('assets/Download/coupon-tablet.png');
     width: 750px;
     height: 570px;
   }
   @media ${({ theme }) => theme.device.pc} {
-    background-image: url('assets/download/coupon-pc.png');
+    background-image: url('assets/Download/coupon-pc.png');
     width: 1150px;
     height: 460px;
   }
