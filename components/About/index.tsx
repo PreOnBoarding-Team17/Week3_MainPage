@@ -8,11 +8,14 @@ interface AboutProps {
 const About = ({ isPc }: AboutProps) => {
   return (
     <Container>
-      <Image
-        src="/assets/About/second-logo.gif"
-        alt="logo"
-        className="fade-up"
-      />
+      <div>
+        <Image
+          className="fade-up gif"
+          src="/assets/About/second-logo.png"
+          alt="logo"
+          loading="lazy"
+        />
+      </div>
       <Title className="fade-up">땅콩스쿨이란?</Title>
       <Text className="fade-up">{AboutText(isPc)}</Text>
     </Container>
@@ -35,6 +38,7 @@ const Container = styled.div`
 const Image = styled.img`
   width: 67px;
   height: 50px;
+
   @media ${({ theme }) => theme.device.tablet} {
     width: 134px;
     height: 100px;

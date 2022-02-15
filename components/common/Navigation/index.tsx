@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { useScroll } from 'utils/hooks/useScroll';
-
+import { NAVIMAGESRC } from 'utils/constants';
 const Navigation: React.FC = () => {
   const [menuBgToggle, setMenuBgToggle] = useState(false);
   const { scrollY } = useScroll();
@@ -14,11 +14,10 @@ const Navigation: React.FC = () => {
     <Nav toggle={menuBgToggle}>
       <NavWrap>
         <Logo>
-          {menuBgToggle ? (
-            <LogoImage src="assets/Navigation/logo-black.png" alt="땅콩스쿨" />
-          ) : (
-            <LogoImage src="assets/Navigation/logo-white.png" alt="땅콩스쿨" />
-          )}
+          <LogoImage
+            src={menuBgToggle ? NAVIMAGESRC[0] : NAVIMAGESRC[1]}
+            alt="땅콩스쿨"
+          />
         </Logo>
         <FullMenu toggle={menuBgToggle}>
           <a href="#">도서구매</a>
