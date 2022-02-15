@@ -113,7 +113,7 @@ const DownloadContentText = styled.div<DownloadContentTextInterface>`
 `;
 
 const DownloadContentRight = styled(DownloadContentLeft)`
-  padding-top: 70px;
+  padding-top: 60px;
   @media ${({ theme }) => theme.device.tablet} {
     margin: 0 0 100px 20px;
   }
@@ -124,17 +124,17 @@ const DownloadContentRight = styled(DownloadContentLeft)`
 
 const DownloadContentRightText = styled(DownloadContentText)`
   color: #fff;
-  font-size: 14px;
-  width: 183px;
-  height: 20px;
+  font-size: 13px;
+  width: 200px;
+  height: 40px;
   background-color: #725801;
-  border-radius: 24px;
-  padding: 10px 10px;
+  border-radius: 50px;
+  padding: 5px 10px;
 `;
 
 const DOWNLOADBTNTEXT = '앱 다운로드 하기';
 const DownloadBtn = styled.button`
-  margin-top: 36px;
+  margin: 30px 0;
   padding: 0 85px;
   height: 50px;
   border-radius: 10px;
@@ -146,15 +146,17 @@ const DownloadBtn = styled.button`
   jsutify-content: center;
 
   @media ${({ theme }) => theme.device.tablet} {
-    font-size: 24px;
-    padding: 40px 20px;
-    margin-top: 30px;
+    font-size: 20px;
+    padding: 30px 30px;
+    margin-top: 20px;
+    border-radius: 50px;
   }
 `;
 const DownloadBtnImage = styled.img`
   width: 24px;
   height: 24px;
   margin-right: 10px;
+  border-radius: 10px;
 `;
 
 interface DownloadProps {
